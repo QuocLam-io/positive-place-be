@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 
-const Signup = () => {
+const Signup = ({setIsLoggedIn}) => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
 
@@ -9,8 +9,12 @@ const Signup = () => {
     e.preventDefault();
     // console.log(username, password);
     axios.post("/auth/signup", { username: username, password: password }).then((results)=>{
-      console.log(results.data);
+      setIsLoggedIn(true);
+    }).catch((error)=>{
+      console.log(error);
+      //!Add React Toast
     });
+    
   };
 
 
