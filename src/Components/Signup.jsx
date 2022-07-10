@@ -1,24 +1,25 @@
 import React, { useState } from "react";
 import axios from "axios";
 
-const Signup = ({setIsLoggedIn}) => {
+const Signup = ({ setIsLoggedIn }) => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
 
   const signUpHandler = (e) => {
     e.preventDefault();
     // console.log(username, password);
-    axios.post("/auth/signup", { username: username, password: password }).then((results)=>{
-      setIsLoggedIn(true);
-    }).catch((error)=>{
-      console.log(error);
-      //!Add React Toast
-    });
-    
+    //* ------------------------------- Calls Axios ------------------------------ */
+    axios
+      .post("/auth/signup", { username: username, password: password })
+      .then((results) => {
+        setIsLoggedIn(true);
+      })
+      .catch((error) => {
+        console.log(error);
+        //! ----------------------------- Add React-Toast ---------------------------- */
+      });
   };
 
-
-  
   return (
     <div className="signup-parent">
       <form onSubmit={signUpHandler}>

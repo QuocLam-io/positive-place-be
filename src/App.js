@@ -1,11 +1,25 @@
 import React, { useState, useEffect } from "react";
 import { Route, Routes } from "react-router-dom";
 import "./App.css";
-//*Dependencies
+//* ------------------------------ Dependencies ------------------------------ */
+import axios from "axios";
+import Navbar from "./Components/Navbar";
 import Signup from "./Components/Signup";
 import Login from "./Components/Login";
-import Navbar from "./Components/Navbar";
-import axios from "axios";
+import Positive from "./Components/Positive";
+import PositiveEdit from "./Components/PostiveEdit";
+import Negative from "./Components/Negative";
+import NegativeEdit from "./Components/NegativeEdit";
+import RememberWhy from "./Components/RememberWhy";
+
+//!Ask Richard about /me route.get
+//!Authenticated to fetch info
+//!Signout button functionality (setIsLoggedIn)
+//!Ask Richard about uploading photos
+//!Models User Schema Relationship
+//!404 Handler
+//!404 Page? (Stretch Goal)
+//!Framer Motion
 
 function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
@@ -26,21 +40,32 @@ function App() {
 
   console.log(
     isLoggedIn,
-    "inside Jillian's warm Jewish fishbox. I'm a man with priorities ♥️"
+    "inside Jillian's warm Jewish fishbox."
   );
 
   return (
     <div className="App">
       <Navbar />
       <Routes>
-        <Route path="/signup" element={<Signup setIsLoggedIn={setIsLoggedIn} />} />
-        <Route path="/"       element={<Login setIsLoggedIn={setIsLoggedIn} />} />
-        //!Set conditional for Gratitude Page
-        //!Models User Schema Relationship
-        //!404 Handler
-        //!Authenticated to fetch info
-        //!404 Page? (Stretch Goal)
-        //!Framer Motion
+        <Route
+          path="/"
+          element={
+            isLoggedIn ? (
+              <Positive />
+            ) : (
+              <Login setIsLoggedIn={setIsLoggedIn} />
+            )
+          }
+        />
+
+        <Route
+          path="/signup"
+          element={<Signup setIsLoggedIn={setIsLoggedIn} />}
+        />
+        <Route path="negative" element={Negative} />
+        <Route path="positive-edit" element={PositiveEdit} />
+        <Route path="negative-edit" element={NegativeEdit} />
+        <Route path="rememberWhy" element={RememberWhy} />
       </Routes>
     </div>
   );
