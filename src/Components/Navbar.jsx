@@ -1,10 +1,12 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-const Navbar = () => {
+const Navbar = ({ isDarkMode, setIsDarkMode, darkModeHandler }) => {
   return (
-    <div className="navbar-parent">
-      <div className="logo">Positive Place</div>
+    <div className={`navbar-parent ${isDarkMode ? "nav-dark" :
+    "nav-light"}
+    `}>
+      <div className="logo">Logo Button</div>
       <div className="navbar">
         <Link to="/signup">
           <div>Signup</div>
@@ -13,6 +15,7 @@ const Navbar = () => {
           <div className="signout-butt">Signout</div>
         </Link>
       </div>
+      <button onClick={darkModeHandler} >Murp</button>
     </div>
   );
 };
