@@ -1,21 +1,40 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-const Navbar = ({ isDarkMode, setIsDarkMode, darkModeHandler }) => {
+const Navbar = ({
+  isDarkMode,
+  setIsDarkMode,
+  darkModeHandler,
+  isLoggedIn,
+  setIsLoggedIn,
+}) => {
+  const logOutHandler = () => {
+    setIsLoggedIn(false);
+  };
+
   return (
-    <div className={`navbar-parent ${isDarkMode ? "nav-dark" :
-    "nav-light"}
-    `}>
-      <div className="logo">Logo Button</div>
-      <div className="navbar">
-        <Link to="/signup">
-          <div>Signup</div>
-        </Link>
-        <Link to="/">
-          <div className="signout-butt">Signout</div>
-        </Link>
-      </div>
-      <button onClick={darkModeHandler} >Murp</button>
+    <div
+      className={`navbar-parent ${isDarkMode ? "nav-dark" : "nav-light"}
+    `}
+    >
+      <Link className="nav-logo" to="/">
+        <img
+          src={`${
+            isDarkMode ? "imgs/logo-negative.png" : "imgs/logo-positive.png"
+          }`}
+          alt="blub"
+        />
+      </Link>
+
+      <button onClick={darkModeHandler}>Mr. Merp</button>
+
+      <Link
+        to="/"
+        className={`signout-butt ${isLoggedIn ? "" : "hidden"}
+          `}
+      >
+        <button onClick={logOutHandler}>Signout</button>
+      </Link>
     </div>
   );
 };
