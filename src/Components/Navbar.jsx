@@ -1,5 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import axios from "axios";
+// import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const Navbar = ({
   isDarkMode,
@@ -9,7 +12,12 @@ const Navbar = ({
   setIsLoggedIn,
 }) => {
   const logOutHandler = () => {
-    setIsLoggedIn(false);
+    axios.post("/auth/logout").then(() => {
+      setIsLoggedIn(false);
+    })
+    // .catch(err => {
+
+    // }); Figure toast notification for error
   };
 
   return (

@@ -1,15 +1,13 @@
 import React, { useState } from "react";
 import axios from "axios";
-import { Link } from "react-router-dom";
+import { Link, Navigate } from "react-router-dom";
 
-const Signup = ({ setIsLoggedIn }) => {
+const Signup = ({ isLoggedIn, setIsLoggedIn }) => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
 
   const signUpHandler = (e) => {
     e.preventDefault();
-    // console.log(username, password);
-    //* ------------------------------- Calls Axios ------------------------------ */
     axios
       .post("/auth/signup", { username: username, password: password })
       .then((results) => {
@@ -17,12 +15,13 @@ const Signup = ({ setIsLoggedIn }) => {
       })
       .catch((error) => {
         console.log(error);
-        //! ----------------------------- Add React-Toast ---------------------------- */
+        //!Throw Toast
       });
   };
 
   return (
     <div className="signup-parent">
+      {isLoggedIn && <Navigate to="/" />}
       <form onSubmit={signUpHandler}>
         <label htmlFor="">Username:</label>
         <input

@@ -11,7 +11,9 @@
 .App {
   display: flex;
   height: 100%;
-  background: rgba(255, 255, 255, 0.5);
+  /* background: rgba(255, 255, 255, 0.5); */
+  /* background: rgba(0, 0, 0, 0.25); */
+  background: #333333;
 }
 
 /* font-family: 'Open Sans', sans-serif; */
@@ -36,7 +38,9 @@
 }
 
 .nav-dark {
-  background-color: #343a40;
+  /* background: #333333; */
+  background-color: rgba(0, 0, 0, 0.25);
+
 }
 
 .nav-logo {
@@ -68,3 +72,7 @@
 .hidden {
   display: none;
 }
+/* 
+.dark-bg {
+  background-color: #343a40;
+} */

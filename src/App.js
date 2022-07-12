@@ -15,14 +15,13 @@ import Negative from "./Components/Negative";
 import NegativeEdit from "./Components/NegativeEdit";
 import RememberWhy from "./Components/RememberWhy";
 
-
-//!Authenticated to fetch info
-//!Signout button functionality (setIsLoggedIn)
-//!Once signed in, automatically go to positive page
 //!Models User Schema Relationship
+//!Prevent empty submissions
 //!404 Handler
 //!404 Page? (Stretch Goal)
 //!Edit Toast
+//!Toast every catch (Ask Leo about express error handler)
+//Todo: JS Try/Catch BE .catch
 //!Framer Motion
 
 function App() {
@@ -69,7 +68,9 @@ function App() {
 
         <Route
           path="/signup"
-          element={<Signup setIsLoggedIn={setIsLoggedIn} />}
+          element={<Signup 
+            isLoggedIn={isLoggedIn}
+            setIsLoggedIn={setIsLoggedIn} />}
         />
 
         <Route path="positive-edit" element={PositiveEdit} />
