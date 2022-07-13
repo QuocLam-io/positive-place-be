@@ -15,14 +15,11 @@ import Negative from "./Components/Negative";
 import NegativeEdit from "./Components/NegativeEdit";
 import RememberWhy from "./Components/RememberWhy";
 
-//!Models User Schema Relationship
-//!Prevent empty submissions
-//!404 Handler
-//!404 Page? (Stretch Goal)
 //!Edit Toast
 //!Toast every catch (Ask Leo about express error handler)
 //Todo: JS Try/Catch BE .catch
 //!Framer Motion
+//!404 Page? (Stretch Goal)
 
 function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
@@ -39,12 +36,12 @@ function App() {
       setIsLoggedIn(data.isLoggedIn);
     });
   }, []);
-  //Tell Richard what I discovered about useEffect empty array filled with isLoggedIn
 
   console.log(isLoggedIn, "logging in");
 
   return (
     <div className="App">
+      //!Dark Mode Ternary
       <Navbar
         isDarkMode={isDarkMode}
         setIsDarkMode={setIsDarkMode}

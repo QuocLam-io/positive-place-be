@@ -22,7 +22,10 @@ const Navbar = ({
 
   return (
     <div
-      className={`navbar-parent ${isDarkMode ? "nav-dark" : "nav-light"}
+      className={`navbar-parent ${isDarkMode ? "nav-dark" : "nav-light" 
+    
+      
+    }
     `}
     >
       <Link className="nav-logo" to="/">
