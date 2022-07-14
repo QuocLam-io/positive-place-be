@@ -19,32 +19,46 @@ const Signup = ({ isLoggedIn, setIsLoggedIn }) => {
       });
   };
 
+
+  /* -------------------------------------------------------------------------- */
+
   return (
     <div className="signup-parent">
       {isLoggedIn && <Navigate to="/" />}
-      <form onSubmit={signUpHandler}>
-        <label htmlFor="">Username:</label>
+
+
+      <form
+        className="signup-form
+      "
+        onSubmit={signUpHandler}
+      >
+        <p className="create-account">Create an account</p>
+
         <input
           type="text"
+          placeholder="Choose a username"
           onChange={(e) => {
             setUsername(e.target.value);
           }}
         />
-        <br />
-        <label htmlFor="">Password:</label>
+
         <input
           type="password"
+          placeholder="Choose a password"
           onChange={(e) => {
             setPassword(e.target.value);
           }}
         />
-        <br />
-        <button type="submit">Butt On</button>
 
+        <button type="submit">Butt On</button>
+      </form>
+
+      <div className="login-redirect">
+        <p>Already have an account?</p>
         <Link to="/">
           <div>Login</div>
         </Link>
-      </form>
+      </div>
     </div>
   );
 };

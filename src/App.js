@@ -3,17 +3,17 @@ import React, { useState, useEffect } from "react";
 import { Route, Routes } from "react-router-dom";
 import "./App.css";
 import axios from "axios";
-import { ToastContainer, toast } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
+
 //* ------------------------------- Components ------------------------------- */
 import Navbar from "./Components/Navbar";
 import Signup from "./Components/Signup";
 import Login from "./Components/Login";
 import Positive from "./Components/Positive";
-import PositiveEdit from "./Components/PostiveEdit";
+import PositiveEdit from "./Components/PositiveEdit";
 import Negative from "./Components/Negative";
 import NegativeEdit from "./Components/NegativeEdit";
 import RememberWhy from "./Components/RememberWhy";
+import HistoryPage from "./Components/HistoryPage";
 
 //!Edit Toast
 //!Toast every catch (Ask Leo about express error handler)
@@ -24,7 +24,6 @@ import RememberWhy from "./Components/RememberWhy";
 function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [isDarkMode, setIsDarkMode] = useState(false);
-  const notify = () => toast("Wow so easy!");
 
   const darkModeHandler = () => {
     setIsDarkMode(!isDarkMode);
@@ -41,7 +40,6 @@ function App() {
 
   return (
     <div className="App">
-      //!Dark Mode Ternary
       <Navbar
         isDarkMode={isDarkMode}
         setIsDarkMode={setIsDarkMode}
@@ -65,19 +63,17 @@ function App() {
 
         <Route
           path="/signup"
-          element={<Signup 
-            isLoggedIn={isLoggedIn}
-            setIsLoggedIn={setIsLoggedIn} />}
+          element={
+            <Signup isLoggedIn={isLoggedIn} setIsLoggedIn={setIsLoggedIn} />
+          }
         />
 
-        <Route path="positive-edit" element={PositiveEdit} />
-        <Route path="negative-edit" element={NegativeEdit} />
-        <Route path="rememberWhy" element={RememberWhy} />
+        <Route path="/positive-edit" element={<PositiveEdit/>} />
+        <Route path="/negative-edit" element={<NegativeEdit/>} />
+        <Route path="/history-page" element={<HistoryPage/>} />
+        <Route path="/remember-why" element={<RememberWhy/>} />
+
       </Routes>
-      <div>
-        <button onClick={notify}>Notify!</button>
-        <ToastContainer />
-      </div>
     </div>
   );
 }

@@ -1,9 +1,21 @@
-import React from 'react'
+import React from "react";
 
 const Negative = () => {
   return (
-    <div>Negative</div>
-  )
-}
+    <div className="negative-parent">
+      <div className="negative-header">
+        <p>Date here</p>
+        <p>Today I'm upset about</p>
+      </div>
 
-export default Negative
+      <form className="negative-input-form" action="">
+        <input type="text" />
+        <input type="text" />
+        <input type="text" />
+        <div>Done</div>
+      </form>
+    </div>
+  );
+};
+
+export default Negative;

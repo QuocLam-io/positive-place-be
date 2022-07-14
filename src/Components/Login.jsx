@@ -20,8 +20,9 @@ const Login = ({ setIsLoggedIn }) => {
   };
 
   return (
-    <div className="login-parent" >
-      <form action="" onSubmit={loginHandler}>
+    <div className="login-parent">
+      <form className="login-form" action="" onSubmit={loginHandler}>
+        <p className="welcome">Welcome Back</p>
         <input
           onChange={(event) => {
             setUsername(event.target.value);
@@ -37,9 +38,14 @@ const Login = ({ setIsLoggedIn }) => {
         <button type="submit">Log Butt</button>
       </form>
 
-      <Link to="/signup">
-        <div>Signup</div>
-      </Link>
+      <div className="signup-redirect">
+        <p>Don't have an account yet? </p>
+        <Link to="/signup">
+          <div>
+            <strong>Signup</strong>
+          </div>
+        </Link>
+      </div>
     </div>
   );
 };

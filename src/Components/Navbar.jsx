@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import axios from "axios";
-// import { ToastContainer, toast } from "react-toastify";
+import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 const Navbar = ({
@@ -14,18 +14,16 @@ const Navbar = ({
   const logOutHandler = () => {
     axios.post("/auth/logout").then(() => {
       setIsLoggedIn(false);
-    })
+    });
     // .catch(err => {
 
     // }); Figure toast notification for error
   };
+  const notify = () => toast("Jillian's boney ass!");
 
   return (
     <div
-      className={`navbar-parent ${isDarkMode ? "nav-dark" : "nav-light" 
-    
-      
-    }
+      className={`navbar-parent ${isDarkMode ? "nav-dark" : "nav-light"}
     `}
     >
       <Link className="nav-logo" to="/">
@@ -37,15 +35,26 @@ const Navbar = ({
         />
       </Link>
 
-      <button onClick={darkModeHandler}>Mr. Merp</button>
+      <Link to="/history-page">My Entries</Link>
+      <Link to="/remember-why">Homer Simpson</Link>
+
+      <div>
+        <button onClick={notify}>Notify!</button>
+        <ToastContainer />
+      </div>
 
       <Link
-        to="/"
-        className={`signout-butt ${isLoggedIn ? "" : "hidden"}
-          `}
+        to="/signup"
+        className={`signin-butt ${isLoggedIn ? "hidden" : ""}`}
       >
-        <button onClick={logOutHandler}>Signout</button>
+        <button onClick={logOutHandler}>Sign In</button>
       </Link>
+
+      <Link to="/" className={`signout-butt ${isLoggedIn ? "" : "hidden"}`}>
+        <button onClick={logOutHandler}>Log out</button>
+      </Link>
+
+      <button onClick={darkModeHandler}>Mr. Merp</button>
     </div>
   );
 };
