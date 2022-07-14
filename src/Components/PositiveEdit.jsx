@@ -1,15 +1,13 @@
-import React from 'react'
+import React from "react";
 
 const PositiveEdit = () => {
+  // const positiveEditHandler = ()=>{
+  //   axios.put(`/api/positive/${Ask Bom}`, {
 
-const positiveEditHandler = ()=>{
-  axios.put("/api/positive/:id", {
+  // })
+  // }
 
-})
-}
-  return (
-    <div>Postive Edit</div>
-  )
-}
+  return <div>Postive Edit</div>;
+};
 
-export default PositiveEdit
+export default PositiveEdit;
