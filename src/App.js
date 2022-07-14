@@ -15,15 +15,55 @@ import NegativeEdit from "./Components/NegativeEdit";
 import RememberWhy from "./Components/RememberWhy";
 import HistoryPage from "./Components/HistoryPage";
 
+//!Edit Positive
+//?Test route
+//!Edit Negative
+//?Test route
+//!History Page Cards
 //!Edit Toast
 //!Toast every catch (Ask Leo about express error handler)
 //Todo: JS Try/Catch BE .catch
 //!Framer Motion
 //!404 Page? (Stretch Goal)
 
+/* --------------------------------- States --------------------------------- */
+
 function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [isDarkMode, setIsDarkMode] = useState(false);
+  const [positiveEntries, setPositiveEntries] = useState("");
+  const [negativeEntries, setNegativeEntries] = useState("");
+
+  /* ----------------------- Positive Entries useEffect ----------------------- */
+
+  useEffect(() => {
+    axios
+      .get("/api/positive")
+      .then((response) => {
+        const pEntries = response.data;
+        setPositiveEntries(pEntries);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  }, []);
+
+
+  /* ----------------------- Negative Entries useEffect ----------------------- */
+
+  useEffect(() => {
+    axios
+      .get("/api/negative")
+      .then((response) => {
+        const nEntries = response.data;
+        setNegativeEntries(nEntries);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  }, []);
+
+  /* ---------------------------- Dark Mode Handler --------------------------- */
 
   const darkModeHandler = () => {
     setIsDarkMode(!isDarkMode);
@@ -36,7 +76,9 @@ function App() {
     });
   }, []);
 
-  console.log(isLoggedIn, "logging in");
+  // console.log(isLoggedIn, "logging in");
+
+  /* -------------------------------------------------------------------------- */
 
   return (
     <div className="App">
@@ -68,11 +110,19 @@ function App() {
           }
         />
 
-        <Route path="/positive-edit" element={<PositiveEdit/>} />
-        <Route path="/negative-edit" element={<NegativeEdit/>} />
-        <Route path="/history-page" element={<HistoryPage/>} />
-        <Route path="/remember-why" element={<RememberWhy/>} />
+        <Route path="/positive-edit/:id" element={<PositiveEdit />} />
+        <Route path="/negative-edit/:id" element={<NegativeEdit />} />
+        <Route
+          path="/history-page"
+          element={
+            <HistoryPage
+              positiveEntries={positiveEntries}
+              negativeEntries={negativeEntries}
+            />
+          }
+        />
 
+        <Route path="/remember-why" element={<RememberWhy />} />
       </Routes>
     </div>
   );

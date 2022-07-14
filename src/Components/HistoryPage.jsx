@@ -1,25 +1,39 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
+import { Link } from "react-router-dom";
 import axios from "axios";
 
-const HistoryPage = () => {
-  const [positiveEntries, setPositiveEntries] = useState("");
+const HistoryPage = ({ positiveEntries, negativeEntries }) => {
 
-  useEffect(() => {
-    axios
-      .get("/api/positive")
-      .then((response) => {
-        const pEntries = response.data;
-        setPositiveEntries(pEntries);
-      })
-      .catch((error) => {
-        console.log(error);
-      });
-  }, []);
+  // console.log(positiveEntries);
+  // console.log(negativeEntries);
 
-  console.log(positiveEntries);
+  //* ------------------- Delete Handler (Yonghair is a god) ------------------- */
 
-  return (
-  <div className="history-parent">History Page</div>);
+  const deleteHandler = (e) => {
+    axios.delete(`/api/positive/${e}`).then((res) => {
+      console.log(res);
+    });
+  };
+
+  /* -------------------------------- Entry Map ------------------------------- */
+  const positiveMap = positiveEntries.map((entry, id) => {
+    return (
+      <div>
+        <p>Date: {entry.day}</p>
+        <p>{entry.todayOne}</p>
+        <p>{entry.todayTwo}</p>
+        <p>{entry.todayThree}</p>
+        <Link to={`/positive-edit/${entry._id}`}>
+          <button>Edit Button</button>
+        </Link>
+
+        <button onClick={() => deleteHandler(entry._id)}>Delete Button</button>
+        <br />
+      </div>
+    );
+  });
+  /* -------------------------------------------------------------------------- */
+  return <div>{positiveMap}</div>;
 };
 
 export default HistoryPage;
