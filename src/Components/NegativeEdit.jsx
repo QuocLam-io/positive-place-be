@@ -13,7 +13,7 @@ const NegativeEdit = () => {
   const negativeEditHandler = (e) => {
     e.preventDefault();
     axios
-      .put(`/api/positive/${id}`, {
+      .put(`/api/negative/${id}`, {
         todayOne: negativeEditOne,
         todayTwo: negativeEditTwo,
         todayThree: negativeEditThree,

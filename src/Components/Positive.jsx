@@ -32,21 +32,21 @@ const Positive = ({positiveEntries, setPositiveEntries}) => {
             setPositiveOne(e.target.value);
           }}
           type="text"
-          placeholder="Posiive One"
+          placeholder="Positive One"
         />
         <input
           onChange={(e) => {
             setPositiveTwo(e.target.value);
           }}
           type="text"
-          placeholder="Posiive Two"
+          placeholder="Positive Two"
         />
         <input
           onChange={(e) => {
             setPositiveThree(e.target.value);
           }}
           type="text"
-          placeholder="Posiive Three"
+          placeholder="Positive Three"
         />
 
         <button type="submit">Done</button>
