@@ -10,8 +10,8 @@ const PositiveEdit = () => {
 
 /* ----------------------------- Update Handler ----------------------------- */
 
-  const positiveEditHandler = () => {
-    // e.preventDefault();
+  const positiveEditHandler = (e) => {
+    e.preventDefault();
     axios
       .put(`/api/positive/${id}`, {
         todayOne: positiveEditOne,
@@ -29,7 +29,6 @@ const PositiveEdit = () => {
 /* ------------------------------- Use Effect ------------------------------- */
   useEffect(() => {
     // e.preventDefault();
-    console.log(id);
     axios
       .get(`/api/positive/${id}`)
       .then((res) => {

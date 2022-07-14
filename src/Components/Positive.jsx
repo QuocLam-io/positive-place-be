@@ -1,7 +1,7 @@
 import axios from "axios";
 import React, { useState } from "react";
 
-const Positive = () => {
+const Positive = ({positiveEntries, setPositiveEntries}) => {
   const [positiveOne, setPositiveOne] = useState("");
   const [positiveTwo, setPositiveTwo] = useState("");
   const [positiveThree, setPositiveThree] = useState("");
@@ -13,7 +13,11 @@ const Positive = () => {
       todayOne: positiveOne,
       todayTwo: positiveTwo,
       todayThree: positiveThree,
-    });
+    })
+      .then((res) => {
+        setPositiveEntries([...positiveEntries, res.data]);
+        console.log(res.data);
+      })
   };
   return (
     <div className="positive-parent">

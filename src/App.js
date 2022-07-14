@@ -15,10 +15,9 @@ import NegativeEdit from "./Components/NegativeEdit";
 import RememberWhy from "./Components/RememberWhy";
 import HistoryPage from "./Components/HistoryPage";
 
+//!Copy Positive to Negatives
 //!Edit Positive
-//?Test route
 //!Edit Negative
-//?Test route
 //!History Page Cards
 //!Edit Toast
 //!Toast every catch (Ask Leo about express error handler)
@@ -78,7 +77,7 @@ function App() {
 
   // console.log(isLoggedIn, "logging in");
 
-  /* -------------------------------------------------------------------------- */
+  //* -------------------------------------------------------------------------- */
 
   return (
     <div className="App">
@@ -96,7 +95,7 @@ function App() {
             isLoggedIn && isDarkMode ? (
               <Negative />
             ) : isLoggedIn && !isDarkMode ? (
-              <Positive />
+              <Positive positiveEntries={positiveEntries} setPositiveEntries={setPositiveEntries}/>
             ) : (
               <Login setIsLoggedIn={setIsLoggedIn} />
             )

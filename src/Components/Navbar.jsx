@@ -37,8 +37,6 @@ const Navbar = ({
 
       <Link to="/history-page">My Entries</Link>
       <Link to="/remember-why">Homer Simpson</Link>
-      <Link to="/positive-edit">Positive Edit</Link>
-      <Link to="/negative-edit">Negative Edit</Link>
 
       <div>
         <button onClick={notify}>Notify!</button>

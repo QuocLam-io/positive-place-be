@@ -4,10 +4,7 @@ import axios from "axios";
 
 const HistoryPage = ({ positiveEntries, negativeEntries }) => {
 
-  // console.log(positiveEntries);
-  // console.log(negativeEntries);
-
-  //* ------------------- Delete Handler (Yonghair is a god) ------------------- */
+  // ------------------- Delete Handler (Yonghair is a god) ------------------- */
 
   const deleteHandler = (e) => {
     axios.delete(`/api/positive/${e}`).then((res) => {
