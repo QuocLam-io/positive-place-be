@@ -2,13 +2,22 @@ import React from "react";
 import { Link } from "react-router-dom";
 import axios from "axios";
 
-const HistoryPage = ({ positiveEntries, negativeEntries }) => {
+const HistoryPage = ({ positiveEntries, negativeEntries, setPositiveEntries }) => {
 
   // ------------------- Delete Handler (Yonghair is a god) ------------------- */
 
   const deleteHandler = (e) => {
     axios.delete(`/api/positive/${e}`).then((res) => {
       console.log(res);
+      axios
+      .get("/api/positive")
+      .then((response) => {
+        const pEntries = response.data;
+        setPositiveEntries(pEntries);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
     });
   };
 

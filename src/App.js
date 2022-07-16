@@ -3,6 +3,8 @@ import React, { useState, useEffect } from "react";
 import { Route, Routes } from "react-router-dom";
 import "./App.css";
 import axios from "axios";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 //* ------------------------------- Components ------------------------------- */
 import Navbar from "./Components/Navbar";
@@ -15,15 +17,12 @@ import NegativeEdit from "./Components/NegativeEdit";
 import RememberWhy from "./Components/RememberWhy";
 import HistoryPage from "./Components/HistoryPage";
 
-//!Copy Positive to Negatives
-//!Edit Positive
-//!Edit Negative
+//!Login/signup empty input
 //!History Page Cards
 //!Edit Toast
 //!Toast every catch (Ask Leo about express error handler)
 //Todo: JS Try/Catch BE .catch
-//!Framer Motion
-//!404 Page? (Stretch Goal)
+//!Edit Forms Framer motion (Strethch Goal)
 
 /* --------------------------------- States --------------------------------- */
 
@@ -32,6 +31,20 @@ function App() {
   const [isDarkMode, setIsDarkMode] = useState(false);
   const [positiveEntries, setPositiveEntries] = useState("");
   const [negativeEntries, setNegativeEntries] = useState("");
+  const months = [
+    "January",
+    "February",
+    "March",
+    "April",
+    "May",
+    "June",
+    "July",
+    "August",
+    "September",
+    "October",
+    "November",
+    "December",
+  ];
 
   /* ----------------------- Positive Entries useEffect ----------------------- */
 
@@ -46,7 +59,6 @@ function App() {
         console.log(error);
       });
   }, []);
-
 
   /* ----------------------- Negative Entries useEffect ----------------------- */
 
@@ -81,6 +93,18 @@ function App() {
 
   return (
     <div className="App">
+      <ToastContainer
+        position="top-center"
+        autoClose={5000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+      />
+
       <Navbar
         isDarkMode={isDarkMode}
         setIsDarkMode={setIsDarkMode}
@@ -93,9 +117,17 @@ function App() {
           path="/"
           element={
             isLoggedIn && isDarkMode ? (
-              <Negative />
+              <Negative
+                negativeEntries={negativeEntries}
+                setNegativeEntries={setNegativeEntries}
+                months={months}
+              />
             ) : isLoggedIn && !isDarkMode ? (
-              <Positive positiveEntries={positiveEntries} setPositiveEntries={setPositiveEntries}/>
+              <Positive
+                positiveEntries={positiveEntries}
+                setPositiveEntries={setPositiveEntries}
+                months={months}
+              />
             ) : (
               <Login setIsLoggedIn={setIsLoggedIn} />
             )
@@ -109,14 +141,24 @@ function App() {
           }
         />
 
-        <Route path="/positive-edit/:id" element={<PositiveEdit />} />
-        <Route path="/negative-edit/:id" element={<NegativeEdit />} />
+        <Route
+          path="/positive-edit/:id"
+          element={<PositiveEdit />}
+          months={months}
+        />
+        <Route
+          path="/negative-edit/:id"
+          element={<NegativeEdit />}
+          months={months}
+        />
         <Route
           path="/history-page"
           element={
             <HistoryPage
               positiveEntries={positiveEntries}
               negativeEntries={negativeEntries}
+              setPositiveEntries={setPositiveEntries}
+              months={months}
             />
           }
         />

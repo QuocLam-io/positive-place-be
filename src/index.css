@@ -20,17 +20,38 @@
 /* font-family: 'Open Sans', sans-serif; */
 /* font-family: 'Work Sans', sans-serif; */
 
+a {
+  text-decoration: none;
+}
+
+a:visited {
+  color: black;
+}
+
 /* --------------------------------- Navbar --------------------------------- */
 
 .navbar-parent {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  justify-content: space-between;
+  /* align-items: center; */
   height: 100%;
   width: 15%;
   font-family: "Work Sans", sans-serif;
-  gap: 1rem;
+  /* gap: 1rem; */
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.nav-top-butts {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 1rem;
+  /* border: teal solid 1px; */
+}
+
+.nav-top-butts a:hover {
+  background: #f5f5f5;
 }
 
 .nav-light {
@@ -44,22 +65,23 @@
 
 .nav-logo {
   width: 70%;
-  /* border: teal solid 2px; */
   margin-top: 1.5rem;
+  /* border: teal solid 2px; */
 }
 
 .nav-logo img {
+  /* border: teal solid 2px; */
   width: 100%;
 }
 
 .signout-butt {
   display: flex;
-  justify-content: center;
+  /* justify-content: center; */
+  /* align-items: center; */
   width: 100%;
   height: 2.5rem;
-
   border: none;
-  background: rgba(255, 255, 255, 0.5);
+  /* background: rgba(255, 255, 255, 0.5); */
   cursor: pointer;
   /* border: teal solid 2px; */
 }
@@ -69,6 +91,7 @@
   border: none;
   background: transparent;
   cursor: pointer;
+  /* border: teal solid 2px; */
 }
 
 .signin-butt {
@@ -88,6 +111,9 @@
   background: transparent;
   cursor: pointer;
 }
+
+
+
 /* ------------------------------- Login Page ------------------------------- */
 
 .login-parent {
@@ -100,13 +126,54 @@
 .login-form {
   display: flex;
   flex-direction: column;
-  margin-top: 11%;
-  border: teal solid 2px;
+  gap: 1.5rem;
+  margin-top: 6%;
+  margin-left: 5%;
+  /* border: teal solid 2px; */
 }
 
-.signup-redirect {
+.login-form input {
   display: flex;
-  gap: 0.2rem;
+  align-items: center;
+  width: 21rem;
+  height: 2rem;
+  font-family: "Work Sans";
+  letter-spacing: 0.02em;
+  border: none;
+}
+
+.welcome {
+  display: flex;
+  align-items: center;
+  font-family: "Work Sans";
+  font-weight: 400;
+  font-size: 2rem;
+  line-height: 125%;
+}
+
+.login-butt {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 130px;
+  height: 48px;
+  background: rgba(0, 0, 0, 0.6);
+  border: none;
+  border-radius: 24px;
+  font-family: "Open Sans";
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.8);
+  cursor: pointer;
+}
+
+.login-redirect {
+  display: flex;
+  margin-top: 1rem;
+  margin-left: 5%;
+  gap: 0.5rem;
+  font-family: "Open Sans";
+  /* border: purple solid 3px; */
 }
 
 /* ------------------------------- Signup Page ------------------------------ */
@@ -121,13 +188,54 @@
 .signup-form {
   display: flex;
   flex-direction: column;
-  margin-top: 11%;
-  border: teal solid 2px;
+  gap: 1.5rem;
+  margin-top: 6%;
+  margin-left: 5%;
+  /* border: teal solid 2px; */
 }
 
-.login-redirect {
+.signup-form input {
   display: flex;
-  gap: 0.2rem;
+  align-items: center;
+  width: 21rem;
+  height: 2rem;
+  font-family: "Work Sans";
+  letter-spacing: 0.02em;
+  border: none;
+}
+
+.create-account {
+  display: flex;
+  align-items: center;
+  font-family: "Work Sans";
+  font-weight: 400;
+  font-size: 2rem;
+  line-height: 125%;
+}
+
+.signup-butt {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 130px;
+  height: 48px;
+  background: rgba(0, 0, 0, 0.6);
+  border: none;
+  border-radius: 24px;
+  font-family: "Open Sans";
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.8);
+  cursor: pointer;
+}
+
+.signup-redirect {
+  display: flex;
+  margin-top: 1rem;
+  margin-left: 5%;
+  gap: 0.5rem;
+  font-family: "Open Sans";
+  /* border: purple solid 3px; */
 }
 
 /* ----------------------------- Positive-Input ---------------------------- */
@@ -187,10 +295,10 @@
 
   /* Explicit grid */
   grid-template-areas:
-    'a  b  c  d'
-    'l  🫥 🫥 e'
-    'k  🫥 🫥 f'
-    'j  i  h  g';
+    "a  b  c  d"
+    "l  🫥 🫥 e"
+    "k  🫥 🫥 f"
+    "j  i  h  g";
 
   grid-template-rows: repeat(4, 25%);
   grid-template-columns: 240px auto auto 240px;
@@ -271,6 +379,11 @@
 }
 
 /* -------------------------------------------------------------------------- */
+.merp {
+  position: absolute;
+  bottom: 1rem;
+  right: 1rem;
+}
 
 .hidden {
   display: none;
@@ -284,3 +397,6 @@
   background: #f5f5f5;
 }
 
+.grey {
+  background: rgba(255, 255, 255, 0.5);
+}

@@ -1,8 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import axios from "axios";
-import { ToastContainer, toast } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
 
 const Navbar = ({
   isDarkMode,
@@ -19,42 +17,55 @@ const Navbar = ({
 
     // }); Figure toast notification for error
   };
-  const notify = () => toast("Jillian's boney ass!");
 
   return (
     <div
       className={`navbar-parent ${isDarkMode ? "nav-dark" : "nav-light"}
-    `}
+      `}
     >
-      <Link className="nav-logo" to="/">
-        <img
-          src={`${
-            isDarkMode ? "imgs/logo-negative.png" : "imgs/logo-positive.png"
-          }`}
-          alt="blub"
-        />
-      </Link>
+      <div className="nav-top-butts">
+        <Link className="nav-logo" to="/">
+          <img
+            src={`${
+              isDarkMode ? "imgs/logo-negative.png" : "imgs/logo-positive.png"
+            }`}
+            alt="blub"
+          />
+        </Link>
 
-      <Link to="/history-page">My Entries</Link>
-      <Link to="/remember-why">Homer Simpson</Link>
+        <Link
+          to="/signup"
+          className={`signin-butt ${isLoggedIn ? "hidden" : ""}`}
+        >
+          <button onClick={logOutHandler}>Sign Up</button>
+        </Link>
 
-      <div>
-        <button onClick={notify}>Notify!</button>
-        <ToastContainer />
+        <Link
+          to="/"
+          className={`signout-butt grey ${isLoggedIn ? "" : "hidden"}`}
+        >
+          <button>Home</button>
+        </Link>
+        <Link
+          to="/history-page"
+          className={`signout-butt ${isLoggedIn ? "" : "hidden"}`}
+        >
+          <button>My Entries</button>
+        </Link>
+        <Link
+          to="/remember-why"
+          className={`signout-butt ${isLoggedIn ? "" : "hidden"}`}
+        >
+          <button>Homer Simpson</button>
+        </Link>
+
+        <button className="merp" onClick={darkModeHandler}>
+          Mr. Merp
+        </button>
       </div>
-
-      <Link
-        to="/signup"
-        className={`signin-butt ${isLoggedIn ? "hidden" : ""}`}
-      >
-        <button onClick={logOutHandler}>Sign In</button>
-      </Link>
-
       <Link to="/" className={`signout-butt ${isLoggedIn ? "" : "hidden"}`}>
         <button onClick={logOutHandler}>Log out</button>
       </Link>
-
-      <button onClick={darkModeHandler}>Mr. Merp</button>
     </div>
   );
 };

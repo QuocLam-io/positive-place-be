@@ -17,8 +17,10 @@ const Signup = ({ isLoggedIn, setIsLoggedIn }) => {
         console.log(error);
         //!Throw Toast
       });
-  };
 
+    // setUsername("");
+    // setPassword("");
+  };
 
   /* -------------------------------------------------------------------------- */
 
@@ -26,12 +28,7 @@ const Signup = ({ isLoggedIn, setIsLoggedIn }) => {
     <div className="signup-parent">
       {isLoggedIn && <Navigate to="/" />}
 
-
-      <form
-        className="signup-form
-      "
-        onSubmit={signUpHandler}
-      >
+      <form className="signup-form" onSubmit={signUpHandler}>
         <p className="create-account">Create an account</p>
 
         <input
@@ -47,16 +44,21 @@ const Signup = ({ isLoggedIn, setIsLoggedIn }) => {
           placeholder="Choose a password"
           onChange={(e) => {
             setPassword(e.target.value);
+            // e.target.value = ""
           }}
         />
 
-        <button type="submit">Butt On</button>
+        <button className="signup-butt" type="submit">
+          Sign Up
+        </button>
       </form>
 
-      <div className="login-redirect">
+      <div className="signup-redirect">
         <p>Already have an account?</p>
         <Link to="/">
-          <div>Login</div>
+          <p>
+            <strong>Login</strong>
+          </p>
         </Link>
       </div>
     </div>
