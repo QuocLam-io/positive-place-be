@@ -20,9 +20,8 @@ import NegativeHistory from "./Components/NegativeHistory";
 
 //!Login/signup empty input
 //!History Page Cards
-//!Edit Toast
+//!Shake butts
 //!Toast every catch (Ask Leo about express error handler)
-//Todo: JS Try/Catch BE .catch
 //!Edit Forms Framer motion (Strethch Goal)
 
 /* --------------------------------- States --------------------------------- */

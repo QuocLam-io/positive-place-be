@@ -58,14 +58,14 @@ const weekday = moment().format("dddd");
             setNegativeTwo(e.target.value);
           }}
           type="text"
-          placeholder="Negative Two"
+          placeholder="2. You're a person who's not worth talking to"
         />
         <input
           onChange={(e) => {
             setNegativeThree(e.target.value);
           }}
           type="text"
-          placeholder="Negative Three"
+          placeholder="3. I only talk to you for the prospect of sexual intercourse - Mehmet"
         />
 
         <button className="login-butt" type="submit">Done</button>

@@ -303,15 +303,48 @@ a:visited {
 .negative-header {
   display: flex;
   flex-direction: column;
-  /* border: teal solid 2px;  */
+  margin-top: 6%;
+  margin-left: 5%;
+  gap: .5rem;
+  /* border: teal solid 2px; */
+}
+
+.negative-header :nth-child(1) {
+  font-family: "open Sans";
+  line-height: 1.5rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.negative-header :nth-child(2) {
+  font-family: "work Sans";
+  font-size: 2rem;
+  line-height: 1.5rem;
+  letter-spacing: 0.1em;
+  /* text-transform: uppercase; */
+  /* color: rgba(0, 0, 0, 0.8); */
 }
 
 .negative-input-form {
   display: flex;
   flex-direction: column;
-  gap: 1rem;
-  width: 100%;
+  /* justify-content: space-around; */
+  margin-top: 1.5rem;
+  margin-left: 5%;
+  gap: 2rem;
   /* border: teal solid 2px; */
+}
+
+.negative-input-form input {
+  display: flex;
+  align-items: center;
+  width: 35rem;
+  height: 3rem;
+  font-family: "Work Sans";
+  letter-spacing: 0.02em;
+  border: none;
+  border-bottom: solid 2px rgba(0, 0, 0, 0.2);
 }
 /* ------------------------------ Remember Why ------------------------------ */
 .remember-why-parent {
