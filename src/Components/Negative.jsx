@@ -51,7 +51,7 @@ const weekday = moment().format("dddd");
             setNegativeOne(e.target.value);
           }}
           type="text"
-          placeholder="Negative One"
+          placeholder="1. You're just a warm body to pass time with"
         />
         <input
           onChange={(e) => {

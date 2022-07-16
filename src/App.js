@@ -3,7 +3,7 @@ import React, { useState, useEffect } from "react";
 import { Route, Routes } from "react-router-dom";
 import "./App.css";
 import axios from "axios";
-import { ToastContainer, toast } from "react-toastify";
+import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 //* ------------------------------- Components ------------------------------- */
@@ -15,7 +15,8 @@ import PositiveEdit from "./Components/PositiveEdit";
 import Negative from "./Components/Negative";
 import NegativeEdit from "./Components/NegativeEdit";
 import RememberWhy from "./Components/RememberWhy";
-import HistoryPage from "./Components/HistoryPage";
+import PositiveHistory from "./Components/PositveHistory";
+import NegativeHistory from "./Components/NegativeHistory";
 
 //!Login/signup empty input
 //!History Page Cards
@@ -93,6 +94,19 @@ function App() {
 
   return (
     <div className="App">
+      <div className="cubes">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+
       <ToastContainer
         position="top-center"
         autoClose={5000}
@@ -154,13 +168,19 @@ function App() {
         <Route
           path="/history-page"
           element={
-            <HistoryPage
-              positiveEntries={positiveEntries}
-              negativeEntries={negativeEntries}
-              setPositiveEntries={setPositiveEntries}
-              setNegativeEntries={setNegativeEntries}
-              months={months}
-            />
+            isDarkMode ? (
+              <NegativeHistory
+                negativeEntries={negativeEntries}
+                setNegativeEntries={setNegativeEntries}
+                months={months}
+              />
+            ) : (
+              <PositiveHistory
+                positiveEntries={positiveEntries}
+                setPositiveEntries={setPositiveEntries}
+                months={months}
+              />
+            )
           }
         />
 

@@ -42,7 +42,7 @@ const weekday = moment().format("dddd");
     <div className="positive-parent">
       <div className="positive-header">
         <p>{today}</p>
-        <p>Today I feel grateful for</p>
+        <p>Today I'm grateful for</p>
       </div>
 
       <form onSubmit={handlePositive} className="positive-input-form" action="">
@@ -51,21 +51,21 @@ const weekday = moment().format("dddd");
             setPositiveOne(e.target.value);
           }}
           type="text"
-          placeholder="Positive One"
+          placeholder="1. The soft glow of blue fire on the kitchen stove while cooking at night"
         />
         <input
           onChange={(e) => {
             setPositiveTwo(e.target.value);
           }}
           type="text"
-          placeholder="Positive Two"
+          placeholder="2. Jillian's stolen glances "
         />
         <input
           onChange={(e) => {
             setPositiveThree(e.target.value);
           }}
           type="text"
-          placeholder="Positive Three"
+          placeholder="3. A moment of flooded memories"
         />
 
         <button className="login-butt" type="submit">Done</button>
