@@ -44,7 +44,7 @@ const Navbar = ({
           to="/"
           className={`signout-butt grey ${isLoggedIn ? "" : "hidden"}`}
         >
-          <button>Home</button>
+          <button>Write a post</button>
         </Link>
         <Link
           to="/history-page"

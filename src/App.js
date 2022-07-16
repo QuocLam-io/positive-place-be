@@ -158,6 +158,7 @@ function App() {
               positiveEntries={positiveEntries}
               negativeEntries={negativeEntries}
               setPositiveEntries={setPositiveEntries}
+              setNegativeEntries={setNegativeEntries}
               months={months}
             />
           }
