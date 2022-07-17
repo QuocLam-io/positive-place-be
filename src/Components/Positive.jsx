@@ -1,27 +1,35 @@
 import axios from "axios";
 import React, { useState } from "react";
 import moment from "moment";
+import { motion } from "framer-motion";
+import PositiveModal from "./PositiveModal";
 
 const Positive = ({ positiveEntries, setPositiveEntries, months }) => {
+  const [positiveModalOpen, setPositiveModalOpen] = useState(false);
   const [positiveOne, setPositiveOne] = useState("");
   const [positiveTwo, setPositiveTwo] = useState("");
   const [positiveThree, setPositiveThree] = useState("");
 
-const weekday = moment().format("dddd");
-  
+  const modalOpen = () => {
+    setPositiveModalOpen(true);
+  };
+  const modalClose = () => {
+    setPositiveModalOpen(false);
+  };
+
+  const weekday = moment().format("dddd");
+
   let today = new Date();
   let dd = today.getDate();
-  let mm = months[today.getMonth()]
+  let mm = months[today.getMonth()];
   let yyyy = today.getFullYear();
 
-  if(dd<10) 
-  {
-      dd='0'+dd;
-  } 
-  if(mm<10) 
-  {
-      mm='0'+mm;
-  } 
+  if (dd < 10) {
+    dd = "0" + dd;
+  }
+  if (mm < 10) {
+    mm = "0" + mm;
+  }
 
   today = `${weekday}, ${mm} ${dd}, ${yyyy}`;
 
@@ -37,6 +45,7 @@ const weekday = moment().format("dddd");
         setPositiveEntries([...positiveEntries, res.data]);
         console.log(res.data);
       });
+    positiveModalOpen ? modalClose() : modalOpen();
   };
   return (
     <div className="positive-parent">
@@ -68,8 +77,18 @@ const weekday = moment().format("dddd");
           placeholder="3. A moment of flooded memories"
         />
 
-        <button className="login-butt" type="submit">Done</button>
+        <motion.button
+          whileHover={{ scale: 1.1 }}
+          whileTap={{ scale: 0.9 }}
+          className="login-butt"
+          type="submit"
+        >
+          Done
+        </motion.button>
       </form>
+      {positiveModalOpen && <PositiveModal
+      positiveModalOpen={positiveModalOpen}
+      /> }
     </div>
   );
 };
