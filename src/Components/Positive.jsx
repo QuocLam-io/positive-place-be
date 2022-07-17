@@ -60,21 +60,21 @@ const Positive = ({ positiveEntries, setPositiveEntries, months }) => {
             setPositiveOne(e.target.value);
           }}
           type="text"
-          placeholder="1. The soft glow of blue fire on the kitchen stove while cooking at night"
+          placeholder="1. Popeye's gravy"
         />
         <input
           onChange={(e) => {
             setPositiveTwo(e.target.value);
           }}
           type="text"
-          placeholder="2. Jillian's stolen glances "
+          placeholder="2. Jillian's eyes"
         />
         <input
           onChange={(e) => {
             setPositiveThree(e.target.value);
           }}
           type="text"
-          placeholder="3. A moment of flooded memories"
+          placeholder="3. The soft glow of blue fire on the kitchen stove while cooking at night"
         />
 
         <motion.button
