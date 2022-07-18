@@ -1,7 +1,7 @@
 import axios from "axios";
 import React, { useState } from "react";
 import moment from "moment";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import PositiveModal from "./PositiveModal";
 
 const Positive = ({ positiveEntries, setPositiveEntries, months }) => {
@@ -86,9 +86,18 @@ const Positive = ({ positiveEntries, setPositiveEntries, months }) => {
           Done
         </motion.button>
       </form>
-      {positiveModalOpen && <PositiveModal
-      positiveModalOpen={positiveModalOpen}
-      /> }
+
+      <AnimatePresence
+        inital={false}
+        exitBeforeEnter={true}
+        onExitComplete={() => null}
+      >
+        {positiveModalOpen && (
+          <PositiveModal
+            modalClose={modalClose}
+          />
+        )}
+      </AnimatePresence>
     </div>
   );
 };

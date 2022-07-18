@@ -1,5 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
+import Backdrop from "./Backdrop";
 
 const dropIn = {
   hidden: {
@@ -22,16 +23,20 @@ const dropIn = {
   },
 };
 
-const PositiveModal = () => {
+const PositiveModal = ({ modalClose }) => {
   return (
-    <motion.div
-      onClick={(e) => e.stopPropagation()}
-      className="positive-modal-parent modal"
-      variants={dropIn}
-      initial="hidden"
-      animate="visible"
-      exit="exit"
-    ></motion.div>
+    <Backdrop onClick={modalClose}>
+      <motion.div
+        className="positive-modal-parent modal"
+        onClick={(e) => e.stopPropagation()}
+        variants={dropIn}
+        initial="hidden"
+        animate="visible"
+        exit="exit"
+      >
+        <button onClick={modalClose}>Booty Out</button>
+      </motion.div>
+    </Backdrop>
   );
 };
 
