@@ -626,14 +626,12 @@ a:visited {
 }
 
 .modal {
-  width: clamp(50%, 700px, 90%);
-  height: min(50%, 300px);
-  margin:auto;
-  padding: 0 2rem;
   display: flex;
   flex-direction: column;
   align-items: center;
-  border: #262626 2px solid;
+  height: min(50%, 300px);
+  width: clamp(50%, 700px, 90%);
+  padding: 0 2rem;
   border-radius: 2rem;
   background: white;
 }

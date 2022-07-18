@@ -25,7 +25,7 @@ const dropIn = {
 
 const PositiveModal = ({ modalClose }) => {
   return (
-    <Backdrop onClick={modalClose}>
+    <Backdrop modalClose={modalClose}>
       <motion.div
         className="positive-modal-parent modal"
         onClick={(e) => e.stopPropagation()}
