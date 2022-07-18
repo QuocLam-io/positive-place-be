@@ -2,10 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import axios from "axios";
 
-const PositiveHistory = ({
-  positiveEntries,
-  setPositiveEntries,
-}) => {
+const PositiveHistory = ({ positiveEntries, setPositiveEntries }) => {
   // ------------------- Positive Delete Handler (Yonghair is a god) ------------------- */
 
   const positiveDeleteHandler = (e) => {
@@ -26,28 +23,39 @@ const PositiveHistory = ({
   /* -------------------------------- Positive Map ------------------------------- */
   const positiveMap = positiveEntries.map((entry, id) => {
     return (
-      <div>
-        <p>Date: {entry.day}</p>
-        <p>{entry.todayOne}</p>
-        <p>{entry.todayTwo}</p>
-        <p>{entry.todayThree}</p>
-        <Link to={`/positive-edit/${entry._id}`}>
-          <button>Edit Button</button>
-        </Link>
+      <div className="positive-history-card">
+        <div className="positive-history-card-entries">
+          <p className="history-date" >{entry.day}</p>
+          <p>1. {entry.todayOne}</p>
+          <p>2. {entry.todayTwo}</p>
+          <p>3. {entry.todayThree}</p>
+        </div>
 
-        <button onClick={() => positiveDeleteHandler(entry._id)}>
-          Delete Button
-        </button>
-        <br />
+        <div className="positive-history-card-btns">
+          <img
+            className="positive-history-delete"
+            src="imgs/rc-delete.png"
+            alt=""
+            onClick={() => positiveDeleteHandler(entry._id)}
+          />
+          <Link to={`/positive-edit/${entry._id}`}>
+            <img src="imgs/rc-edit.png" alt="" />
+          </Link>
+        </div>
       </div>
     );
   });
 
   /* -------------------------------------------------------------------------- */
   return (
-    <div>
-      <p>Positive History</p>
-      <div>{positiveMap}</div>
+    <div className="positive-history-parent">
+      <p
+        className="positive-history-header
+    "
+      >
+        My Entries
+      </p>
+      {positiveMap}
     </div>
   );
 };

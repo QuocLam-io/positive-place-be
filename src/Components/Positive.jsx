@@ -67,7 +67,7 @@ const Positive = ({ positiveEntries, setPositiveEntries, months }) => {
             setPositiveTwo(e.target.value);
           }}
           type="text"
-          placeholder="2. Jillian's eyes"
+          placeholder="2. Julia's eyes"
         />
         <input
           onChange={(e) => {
