@@ -377,17 +377,18 @@ a:visited {
   align-items: flex-start;
   padding: 24px;
   gap: 16px;
-  width: 963px;
-  height: 258px;
+  width: 85%;
+  height: 40%;
   background: #eaeaea;
   border-radius: 18px;
+  margin-left: 3rem;
   /* border: teal solid 2px; */
 }
 
-.positive-history-card-entries{
+.positive-history-card-entries {
   display: flex;
   flex-direction: column;
-  font-family: 'work Sans';
+  font-family: "work Sans";
   font-weight: 600;
   gap: 1.5rem;
   letter-spacing: 0.1em;
@@ -395,12 +396,12 @@ a:visited {
   color: rgba(0, 0, 0, 0.6);
 }
 
-.positive-history-card-entries :nth-child(n+2){
+.positive-history-card-entries :nth-child(n + 2) {
   text-indent: 1rem;
 }
 
 .history-date {
-  font-family: 'Open Sans';
+  font-family: "Open Sans";
   font-weight: 600;
 }
 
@@ -413,6 +414,62 @@ a:visited {
 
 .positive-history-delete {
   cursor: pointer;
+}
+
+/* ------------------------------ Positive Edit ----------------------------- */
+
+.positive-edit-parent {
+  display: flex;
+  flex-direction: column;
+  width: 85%;
+  padding: 2rem;
+  gap: 3rem;
+  /* border: teal solid 2px; */
+}
+
+.positive-edit-header {
+  display: flex;
+  flex-direction: column;
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.positive-edit-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 2rem;
+  width: 54%;
+  /* height: 40%; */
+  gap: 2rem;
+  border-radius: 18px;
+  margin-left: 3rem;
+  /* border: teal solid 2px; */
+}
+
+.positive-edit-form input {
+  display: flex;
+  align-items: center;
+  width: 35rem;
+  height: 3rem;
+  font-family: "Work Sans";
+  letter-spacing: 0.02em;
+  border: none;
+  border-bottom: solid 2px rgba(0, 0, 0, 0.2);
+  background: transparent;
+}
+
+.positive-edit-btns {
+  display: flex;
+  flex-direction: row-reverse;
+  gap: 1rem;
+  /* width: 100%; */
 }
 /* ------------------------------ Remember Why ------------------------------ */
 .remember-why-parent {

@@ -3,12 +3,13 @@ import { useParams } from "react-router-dom";
 import axios from "axios";
 
 const PositiveEdit = () => {
+  const [positiveEditDate, setPositiveEditDate] = useState("");
   const [positiveEditOne, setPositiveEditOne] = useState("");
   const [positiveEditTwo, setPositiveEditTwo] = useState("");
   const [positiveEditThree, setPositiveEditThree] = useState("");
   const { id } = useParams();
 
-/* ----------------------------- Update Handler ----------------------------- */
+  /* ----------------------------- Update Handler ----------------------------- */
 
   const positiveEditHandler = (e) => {
     e.preventDefault();
@@ -24,15 +25,16 @@ const PositiveEdit = () => {
       .catch((err) => {
         console.log(err);
       });
-  }
+  };
 
-/* ------------------------------- Use Effect ------------------------------- */
+  /* ------------------------------- Use Effect ------------------------------- */
   useEffect(() => {
     // e.preventDefault();
     axios
       .get(`/api/positive/${id}`)
       .then((res) => {
         console.log(res);
+        setPositiveEditDate(res.data.day);
         setPositiveEditOne(res.data.todayOne);
         setPositiveEditTwo(res.data.todayTwo);
         setPositiveEditThree(res.data.todayThree);
@@ -41,17 +43,16 @@ const PositiveEdit = () => {
         console.log(err);
       });
   }, []);
-/* -------------------------------------------------------------------------- */
+  /* -------------------------------------------------------------------------- */
   return (
     <div className="positive-edit-parent">
       <div className="positive-edit-header">
-        <p>Date here</p>
-        <p>Don't worry, we all make mistakes sometimes</p>
+        <p>{positiveEditDate}</p>
       </div>
 
       <form
         onSubmit={positiveEditHandler}
-        className="positive-input-form"
+        className="positive-edit-form"
         action=""
       >
         <input
@@ -77,8 +78,11 @@ const PositiveEdit = () => {
           type="text"
           placeholder="Posiive Three"
         />
-
-        <button type="submit">Done</button>
+        <div className="positive-edit-btns">
+          <button className="login-butt" type="submit">
+            Done
+          </button>
+        </div>
       </form>
     </div>
   );
