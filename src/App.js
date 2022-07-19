@@ -23,8 +23,8 @@ import NegativeHistory from "./Components/NegativeHistory";
 function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [isDarkMode, setIsDarkMode] = useState(false);
-  const [positiveEntries, setPositiveEntries] = useState("");
-  const [negativeEntries, setNegativeEntries] = useState("");
+  const [positiveEntries, setPositiveEntries] = useState([]);
+  const [negativeEntries, setNegativeEntries] = useState([]);
   const months = [
     "January",
     "February",
@@ -44,7 +44,7 @@ function App() {
 
   useEffect(() => {
     axios
-      .get("https://positive-place-be.herokuapp.com/api/positive")
+      .get("/api/positive")
       .then((response) => {
         const pEntries = response.data;
         setPositiveEntries(pEntries);
@@ -58,7 +58,7 @@ function App() {
 
   useEffect(() => {
     axios
-      .get("https://positive-place-be.herokuapp.com/api/negative")
+      .get("/api/negative")
       .then((response) => {
         const nEntries = response.data;
         setNegativeEntries(nEntries);
@@ -76,7 +76,7 @@ function App() {
 
   useEffect(() => {
     axios
-      .get("https://positive-place-be.herokuapp.com/auth/me")
+      .get("/auth/me")
       .then(({ data }) => {
         //{data} is destructed response data
         setIsLoggedIn(data.isLoggedIn);

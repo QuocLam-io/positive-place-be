@@ -6,18 +6,20 @@ const PositiveHistory = ({ positiveEntries, setPositiveEntries }) => {
   // ------------------- Positive Delete Handler (Yonghair is a god) ------------------- */
 
   const positiveDeleteHandler = (e) => {
-    axios.delete(`https://positive-place-be.herokuapp.com/api/positive/${e}`).then((res) => {
-      console.log(res);
-      axios
-        .get("https://positive-place-be.herokuapp.com/api/positive")
-        .then((response) => {
-          const pEntries = response.data;
-          setPositiveEntries(pEntries);
-        })
-        .catch((error) => {
-          console.log(error);
-        });
-    });
+    axios
+      .delete(`/api/positive/${e}`)
+      .then((res) => {
+        console.log(res);
+        axios
+          .get("/api/positive")
+          .then((response) => {
+            const pEntries = response.data;
+            setPositiveEntries(pEntries);
+          })
+          .catch((error) => {
+            console.log(error);
+          });
+      });
   };
 
   /* -------------------------------- Positive Map ------------------------------- */
@@ -25,7 +27,7 @@ const PositiveHistory = ({ positiveEntries, setPositiveEntries }) => {
     return (
       <div className="positive-history-card">
         <div className="positive-history-card-entries">
-          <p className="history-date" >{entry.day}</p>
+          <p className="history-date">{entry.day}</p>
           <p>1. {entry.todayOne}</p>
           <p>2. {entry.todayTwo}</p>
           <p>3. {entry.todayThree}</p>

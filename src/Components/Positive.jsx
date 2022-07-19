@@ -36,7 +36,7 @@ const Positive = ({ positiveEntries, setPositiveEntries, months }) => {
   const handlePositive = (e) => {
     e.preventDefault();
     axios
-      .post("https://positive-place-be.herokuapp.com/api/positive", {
+      .post("/api/positive", {
         todayOne: positiveOne,
         todayTwo: positiveTwo,
         todayThree: positiveThree,

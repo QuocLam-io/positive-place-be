@@ -6,10 +6,10 @@ const NegativeHistory = ({ negativeEntries, setNegativeEntries }) => {
   // ------------------- Negative Delete Handler (Yonghair is a god) ------------------- */
 
   const negativeDeleteHandler = (e) => {
-    axios.delete(`https://positive-place-be.herokuapp.com/api/negative/${e}`).then((res) => {
+    axios.delete(`/api/negative/${e}`).then((res) => {
       console.log(res);
       axios
-        .get("https://positive-place-be.herokuapp.com/api/negative")
+        .get("/api/negative")
         .then((response) => {
           const nEntries = response.data;
           setNegativeEntries(nEntries);
