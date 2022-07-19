@@ -2,11 +2,8 @@ import React from "react";
 import { Link } from "react-router-dom";
 import axios from "axios";
 
-const NegativeHistory = ({
-  negativeEntries,
-  setNegativeEntries,
-}) => {
-  // ------------------- Positive Delete Handler (Yonghair is a god) ------------------- */
+const NegativeHistory = ({ negativeEntries, setNegativeEntries }) => {
+  // ------------------- Negative Delete Handler (Yonghair is a god) ------------------- */
 
   const negativeDeleteHandler = (e) => {
     axios.delete(`/api/negative/${e}`).then((res) => {
@@ -23,31 +20,42 @@ const NegativeHistory = ({
     });
   };
 
-  /* -------------------------------- Positive Map ------------------------------- */
+  /* -------------------------------- Negative Map ------------------------------- */
   const negativeMap = negativeEntries.map((entry, id) => {
     return (
-      <div>
-        <p>Date: {entry.day}</p>
-        <p>{entry.todayOne}</p>
-        <p>{entry.todayTwo}</p>
-        <p>{entry.todayThree}</p>
-        <Link to={`/negative-edit/${entry._id}`}>
-          <button>Edit Button</button>
-        </Link>
+      <div className="negative-history-card">
+        <div className="negative-history-card-entries">
+          <p className="history-date" >{entry.day}</p>
+          <p>1. {entry.todayOne}</p>
+          <p>2. {entry.todayTwo}</p>
+          <p>3. {entry.todayThree}</p>
+        </div>
 
-        <button onClick={() => negativeDeleteHandler(entry._id)}>
-          Delete Button
-        </button>
-        <br />
+        <div className="negative-history-card-btns">
+          <img
+            className="negative-history-delete"
+            src="imgs/rc-delete.png"
+            alt=""
+            onClick={() => negativeDeleteHandler(entry._id)}
+          />
+          <Link to={`/negative-edit/${entry._id}`}>
+            <img src="imgs/rc-edit.png" alt="" />
+          </Link>
+        </div>
       </div>
     );
   });
 
   /* -------------------------------------------------------------------------- */
   return (
-    <div>
-      <p>Negative History</p>
-      <div>{negativeMap}</div>
+    <div className="negative-history-parent">
+      <p
+        className="negative-history-header
+    "
+      >
+        My Entries
+      </p>
+      {negativeMap}
     </div>
   );
 };

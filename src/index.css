@@ -348,6 +348,7 @@ a:visited {
   font-family: "Work Sans";
   letter-spacing: 0.02em;
   border: none;
+  /* background: transparent; */
   border-bottom: solid 2px rgba(0, 0, 0, 0.2);
 }
 
@@ -414,6 +415,73 @@ a:visited {
 }
 
 .positive-history-delete {
+  cursor: pointer;
+}
+
+/* ---------------------------- Negative History ---------------------------- */
+
+.negative-history-parent {
+  display: flex;
+  flex-direction: column;
+  width: 85%;
+  padding: 2rem;
+  gap: 3rem;
+  /* border: teal solid 2px; */
+}
+
+.negative-history-header {
+  display: flex;
+  align-items: center;
+  font-family: "Work Sans";
+  font-size: 32px;
+  line-height: 125%;
+  color: rgba(255, 255, 255, 0.7);
+  /* background: red; */
+}
+
+.negative-history-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 24px;
+  gap: 16px;
+  width: 85%;
+  height: 40%;
+  background: #eaeaea;
+  border-radius: 18px;
+  margin-left: 3rem;
+  /* border: teal solid 2px; */
+}
+
+.negative-history-card-entries {
+  display: flex;
+  flex-direction: column;
+  font-family: "work Sans";
+  font-weight: 600;
+  gap: 1.5rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.negative-history-card-entries :nth-child(n + 2) {
+  text-indent: 1rem;
+}
+
+.history-date {
+  font-family: "Open Sans";
+  font-weight: 600;
+}
+
+.negative-history-card-btns {
+  display: flex;
+  flex-direction: row-reverse;
+  gap: 1rem;
+  width: 100%;
+}
+
+.negative-history-delete {
   cursor: pointer;
 }
 
