@@ -3,12 +3,13 @@ import { useParams } from "react-router-dom";
 import axios from "axios";
 
 const NegativeEdit = () => {
+  const [negativeEditDate, setNegativeEditDate] = useState("");
   const [negativeEditOne, setNegativeEditOne] = useState("");
   const [negativeEditTwo, setNegativeEditTwo] = useState("");
   const [negativeEditThree, setNegativeEditThree] = useState("");
   const { id } = useParams();
 
-/* ----------------------------- Update Handler ----------------------------- */
+  /* ----------------------------- Update Handler ----------------------------- */
 
   const negativeEditHandler = (e) => {
     e.preventDefault();
@@ -24,15 +25,16 @@ const NegativeEdit = () => {
       .catch((err) => {
         console.log(err);
       });
-  }
+  };
 
-/* ------------------------------- Use Effect ------------------------------- */
+  /* ------------------------------- Use Effect ------------------------------- */
   useEffect(() => {
     // e.preventDefault();
     axios
       .get(`/api/negative/${id}`)
       .then((res) => {
         console.log(res);
+        setNegativeEditDate(res.data.day);
         setNegativeEditOne(res.data.todayOne);
         setNegativeEditTwo(res.data.todayTwo);
         setNegativeEditThree(res.data.todayThree);
@@ -41,17 +43,16 @@ const NegativeEdit = () => {
         console.log(err);
       });
   }, []);
-/* -------------------------------------------------------------------------- */
+  /* -------------------------------------------------------------------------- */
   return (
     <div className="negative-edit-parent">
       <div className="negative-edit-header">
-        <p>Date here</p>
-        <p>Don't worry, we all make mistakes sometimes</p>
+        <p>{negativeEditDate}</p>
       </div>
 
       <form
         onSubmit={negativeEditHandler}
-        className="negative-input-form"
+        className="negative-edit-form"
         action=""
       >
         <input
@@ -60,6 +61,7 @@ const NegativeEdit = () => {
             setNegativeEditOne(e.target.value);
           }}
           type="text"
+          placeholder="Negative One"
         />
         <input
           value={negativeEditTwo}
@@ -77,8 +79,11 @@ const NegativeEdit = () => {
           type="text"
           placeholder="Negative Three"
         />
-
-        <button type="submit">Done</button>
+        <div className="negative-edit-btns">
+          <button className="login-butt" type="submit">
+            Done
+          </button>
+        </div>
       </form>
     </div>
   );

@@ -61,6 +61,7 @@ const PositiveEdit = () => {
             setPositiveEditOne(e.target.value);
           }}
           type="text"
+          placeholder="Positive One"
         />
         <input
           value={positiveEditTwo}
@@ -68,7 +69,7 @@ const PositiveEdit = () => {
             setPositiveEditTwo(e.target.value);
           }}
           type="text"
-          placeholder="Posiive Two"
+          placeholder="Positive Two"
         />
         <input
           value={positiveEditThree}
@@ -76,7 +77,7 @@ const PositiveEdit = () => {
             setPositiveEditThree(e.target.value);
           }}
           type="text"
-          placeholder="Posiive Three"
+          placeholder="Positive Three"
         />
         <div className="positive-edit-btns">
           <button className="login-butt" type="submit">

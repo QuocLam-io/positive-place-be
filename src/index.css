@@ -348,8 +348,8 @@ a:visited {
   font-family: "Work Sans";
   letter-spacing: 0.02em;
   border: none;
-  /* background: transparent; */
-  border-bottom: solid 2px rgba(0, 0, 0, 0.2);
+  background: transparent;
+  border-bottom: solid 2px rgba(255, 255, 255, 0.7);
 }
 
 /* ---------------------------- Positive History ---------------------------- */
@@ -535,6 +535,66 @@ a:visited {
 }
 
 .positive-edit-btns {
+  display: flex;
+  flex-direction: row-reverse;
+  gap: 1rem;
+  /* width: 100%; */
+}
+/* ------------------------------ Negative Edit ----------------------------- */
+
+.negative-edit-parent {
+  display: flex;
+  flex-direction: column;
+  width: 85%;
+  padding: 2rem;
+  gap: 3rem;
+  /* border: teal solid 2px; */
+}
+
+.negative-edit-header {
+  display: flex;
+  flex-direction: column;
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.negative-edit-header p{
+  color:rgba(255, 255, 255, 0.7)
+}
+
+.negative-edit-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 2rem;
+  width: 54%;
+  /* height: 40%; */
+  gap: 2rem;
+  border-radius: 18px;
+  margin-left: 3rem;
+  /* border: teal solid 2px; */
+}
+
+.negative-edit-form input {
+  display: flex;
+  align-items: center;
+  width: 35rem;
+  height: 3rem;
+  font-family: "Work Sans";
+  letter-spacing: 0.02em;
+  border: none;
+  border-bottom: solid 2px rgba(255, 255, 255, 0.7);
+  background: transparent;
+  color:rgba(255, 255, 255, 0.7);
+}
+
+.negative-edit-btns {
   display: flex;
   flex-direction: row-reverse;
   gap: 1rem;

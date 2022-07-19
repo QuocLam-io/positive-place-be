@@ -53,7 +53,7 @@ const NegativeHistory = ({ negativeEntries, setNegativeEntries }) => {
         className="negative-history-header
     "
       >
-        My Entries
+        My Negative Entries
       </p>
       {negativeMap}
     </div>
