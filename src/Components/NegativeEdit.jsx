@@ -14,7 +14,7 @@ const NegativeEdit = () => {
   const negativeEditHandler = (e) => {
     e.preventDefault();
     axios
-      .put(`/api/negative/${id}`, {
+      .put(`https://positive-place-be.herokuapp.com/api/negative/${id}`, {
         todayOne: negativeEditOne,
         todayTwo: negativeEditTwo,
         todayThree: negativeEditThree,
@@ -31,7 +31,7 @@ const NegativeEdit = () => {
   useEffect(() => {
     // e.preventDefault();
     axios
-      .get(`/api/negative/${id}`)
+      .get(`https://positive-place-be.herokuapp.com/api/negative/${id}`)
       .then((res) => {
         console.log(res);
         setNegativeEditDate(res.data.day);

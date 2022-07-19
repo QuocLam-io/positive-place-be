@@ -44,7 +44,7 @@ function App() {
 
   useEffect(() => {
     axios
-      .get("/api/positive")
+      .get("https://positive-place-be.herokuapp.com/api/positive")
       .then((response) => {
         const pEntries = response.data;
         setPositiveEntries(pEntries);
@@ -58,7 +58,7 @@ function App() {
 
   useEffect(() => {
     axios
-      .get("/api/negative")
+      .get("https://positive-place-be.herokuapp.com/api/negative")
       .then((response) => {
         const nEntries = response.data;
         setNegativeEntries(nEntries);
@@ -75,10 +75,12 @@ function App() {
   };
 
   useEffect(() => {
-    axios.get("/auth/me").then(({ data }) => {
-      //{data} is destructed response data
-      setIsLoggedIn(data.isLoggedIn);
-    });
+    axios
+      .get("https://positive-place-be.herokuapp.com/auth/me")
+      .then(({ data }) => {
+        //{data} is destructed response data
+        setIsLoggedIn(data.isLoggedIn);
+      });
   }, []);
 
   // console.log(isLoggedIn, "logging in");
@@ -86,7 +88,7 @@ function App() {
   //* -------------------------------------------------------------------------- */
 
   return (
-    <div className={`App ${isDarkMode ? "dark-bg" : "" }`}>
+    <div className={`App ${isDarkMode ? "dark-bg" : ""}`}>
       <div className="cubes">
         <div></div>
         <div></div>
@@ -137,10 +139,7 @@ function App() {
                 months={months}
               />
             ) : (
-              <Login 
-              setIsLoggedIn={setIsLoggedIn}
-              isDarkMode={isDarkMode}
-               />
+              <Login setIsLoggedIn={setIsLoggedIn} isDarkMode={isDarkMode} />
             )
           }
         />
@@ -148,7 +147,11 @@ function App() {
         <Route
           path="/signup"
           element={
-            <Signup isLoggedIn={isLoggedIn} setIsLoggedIn={setIsLoggedIn} isDarkMode={isDarkMode}/>
+            <Signup
+              isLoggedIn={isLoggedIn}
+              setIsLoggedIn={setIsLoggedIn}
+              isDarkMode={isDarkMode}
+            />
           }
         />
 
