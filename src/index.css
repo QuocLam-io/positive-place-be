@@ -890,12 +890,46 @@ a:visited {
 .modal {
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   align-items: center;
   height: min(50%, 300px);
   width: clamp(50%, 700px, 90%);
-  padding: 0 2rem;
+  padding: 1rem;
+  /* gap: 2rem; */
   border-radius: 2rem;
-  background: white;
+  background: rgba(255, 255, 255);
+}
+
+.modal-text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 13rem;
+  background: black;
+  border: 1px solid #e5e5e5;
+  border-radius: 2rem;
+  /* margin: 1rem 0; */
+  font-family: work-sans, sans-serif;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.modal-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 3rem;
+  background: black;
+  border: 1px solid #e5e5e5;
+  border-radius: 2rem;
+  /* margin: 1rem 0; */
+  font-size: 1.2rem;
+  font-weight: bold;
+  cursor: pointer;
+  color: rgba(255, 255, 255, 0.8);
 }
 
 /* -------------------------------------------------------------------------- */

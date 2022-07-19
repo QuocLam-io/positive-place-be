@@ -27,14 +27,17 @@ const PositiveModal = ({ modalClose }) => {
   return (
     <Backdrop modalClose={modalClose}>
       <motion.div
-        className="positive-modal-parent modal"
+        className="modal"
         onClick={(e) => e.stopPropagation()}
         variants={dropIn}
         initial="hidden"
         animate="visible"
         exit="exit"
       >
-        <button onClick={modalClose}>Booty Out</button>
+        <p className="modal-text">🤗 You've just entered a post</p>
+        <button className="modal-btn" onClick={modalClose}>
+          X
+        </button>
       </motion.div>
     </Backdrop>
   );
