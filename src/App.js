@@ -18,13 +18,7 @@ import RememberWhy from "./Components/RememberWhy";
 import PositiveHistory from "./Components/PositveHistory";
 import NegativeHistory from "./Components/NegativeHistory";
 
-//!Login/signup empty input
-//!History Page Cards
-//!Shake butts
-//!Toast every catch (Ask Leo about express error handler)
-//!Edit Forms Framer motion (Strethch Goal)
-
-/* --------------------------------- States --------------------------------- */
+//* --------------------------------- States --------------------------------- */
 
 function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
@@ -92,7 +86,7 @@ function App() {
   //* -------------------------------------------------------------------------- */
 
   return (
-    <div className="App">
+    <div className={`App ${isDarkMode ? "dark-bg" : "" }`}>
       <div className="cubes">
         <div></div>
         <div></div>
@@ -134,6 +128,7 @@ function App() {
                 negativeEntries={negativeEntries}
                 setNegativeEntries={setNegativeEntries}
                 months={months}
+                isDarkMode={isDarkMode}
               />
             ) : isLoggedIn && !isDarkMode ? (
               <Positive
@@ -142,7 +137,10 @@ function App() {
                 months={months}
               />
             ) : (
-              <Login setIsLoggedIn={setIsLoggedIn} />
+              <Login 
+              setIsLoggedIn={setIsLoggedIn}
+              isDarkMode={isDarkMode}
+               />
             )
           }
         />

@@ -35,7 +35,9 @@ const Navbar = ({
 
         <Link
           to="/signup"
-          className={`signin-butt ${isLoggedIn ? "hidden" : ""}`}
+          className={`signin-butt ${isLoggedIn ? "hidden" : ""} ${
+            isDarkMode ? "dark-bg" : ""
+          }`}
         >
           <button onClick={logOutHandler}>Sign Up</button>
         </Link>

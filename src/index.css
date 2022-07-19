@@ -121,6 +121,7 @@ a:visited {
   display: flex;
   flex-direction: column;
   width: 85%;
+  /* color: white; */
   /* border: teal solid 2px; */
 }
 
@@ -625,6 +626,11 @@ a:visited {
 
 .grey {
   background: rgba(255, 255, 255, 0.5);
+}
+
+.text-white {
+  color: rgba(255, 255, 255, 0.8);
+  
 }
 
 /* ----------------------------- Cube Animations ---------------------------- */

@@ -4,7 +4,7 @@ import axios from "axios";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
-const Login = ({ setIsLoggedIn }) => {
+const Login = ({ setIsLoggedIn, isDarkMode }) => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
 
@@ -32,16 +32,15 @@ const Login = ({ setIsLoggedIn }) => {
       .then((results) => {
         setIsLoggedIn(true);
       })
-      .catch(()=>{
-        notify()}
-      );
-
+      .catch(() => {
+        notify();
+      });
   };
 
   /* -------------------------------------------------------------------------- */
 
   return (
-    <div className="login-parent">
+    <div className={`login-parent ${isDarkMode ? "text-white" : ""} `}>
       <form className="login-form" onSubmit={loginHandler}>
         <p className="welcome">Welcome Back</p>
 
