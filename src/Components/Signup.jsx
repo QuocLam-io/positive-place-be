@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import axios from "axios";
 import { Link, Navigate } from "react-router-dom";
 
-const Signup = ({ isLoggedIn, setIsLoggedIn }) => {
+const Signup = ({ isLoggedIn, setIsLoggedIn, isDarkMode }) => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
 
@@ -25,7 +25,7 @@ const Signup = ({ isLoggedIn, setIsLoggedIn }) => {
   /* -------------------------------------------------------------------------- */
 
   return (
-    <div className="signup-parent">
+    <div className={`signup-parent ${isDarkMode ? "text-white" : ""}`}>
       {isLoggedIn && <Navigate to="/" />}
 
       <form className="signup-form" onSubmit={signUpHandler}>

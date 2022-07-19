@@ -148,7 +148,7 @@ function App() {
         <Route
           path="/signup"
           element={
-            <Signup isLoggedIn={isLoggedIn} setIsLoggedIn={setIsLoggedIn} />
+            <Signup isLoggedIn={isLoggedIn} setIsLoggedIn={setIsLoggedIn} isDarkMode={isDarkMode}/>
           }
         />
 
