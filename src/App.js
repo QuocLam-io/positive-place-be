@@ -176,6 +176,7 @@ function App() {
                 positiveEntries={positiveEntries}
                 setPositiveEntries={setPositiveEntries}
                 months={months}
+                isDarkMode={isDarkMode}
               />
             )
           }

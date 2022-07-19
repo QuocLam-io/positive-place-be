@@ -1,10 +1,10 @@
 import React from "react";
 import { motion } from "framer-motion";
 
-const RememberWhy = () => {
+const RememberWhy = (isDarkMode) => {
   return (
     <div className="remember-why-parent">
-      I am the vague feeling of a distant memory
+      <p className="text-white" >I am the vague feeling of a distant memory</p>
       <section className="animated-grid">
         <motion.div
           whileHover={{ scale: 1.1 }}
