@@ -2,7 +2,7 @@ import axios from "axios";
 import React, { useState } from "react";
 import moment from "moment";
 
-const Negative = ({ negativeEntries, setNegativeEntries, months }) => {
+const Negative = ({ negativeEntries, setNegativeEntries, months, isDarkMode }) => {
   const [negativeOne, setNegativeOne] = useState("");
   const [negativeTwo, setNegativeTwo] = useState("");
   const [negativeThree, setNegativeThree] = useState("");
@@ -24,6 +24,7 @@ const weekday = moment().format("dddd");
   } 
 
   today = `${weekday}, ${mm} ${dd}, ${yyyy}`;
+  console.log(typeof today);
 
   const handleNegative = (e) => {
     e.preventDefault();
@@ -39,9 +40,9 @@ const weekday = moment().format("dddd");
       });
   };
   return (
-    <div className="negative-parent">
-      <div className="negative-header">
-        <p>{today}</p>
+    <div className={`negative-parent ${isDarkMode ? "text-white" : ""}`}>
+      <div className="negative-header ">
+        <p className="negative-header-date" >{today}</p>
         <p>Today I feel hateful for</p>
       </div>
 

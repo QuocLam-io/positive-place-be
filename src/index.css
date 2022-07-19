@@ -313,12 +313,12 @@ a:visited {
   /* border: teal solid 2px; */
 }
 
-.negative-header :nth-child(1) {
+.negative-header-date {
   font-family: "open Sans";
   line-height: 1.5rem;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  color: rgba(0, 0, 0, 0.6);
+  color: rgba(255, 255, 255, 0.8);
 }
 
 .negative-header :nth-child(2) {
@@ -630,7 +630,6 @@ a:visited {
 
 .text-white {
   color: rgba(255, 255, 255, 0.8);
-  
 }
 
 /* ----------------------------- Cube Animations ---------------------------- */
