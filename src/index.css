@@ -15,7 +15,6 @@ body {
 .App {
   display: flex;
   height: 100%;
-
   /* background: rgba(255, 255, 255, 0.5); */
   /* background: rgba(0, 0, 0, 0.25); */
   /* background: #262626; */
@@ -564,8 +563,8 @@ a:visited {
   color: rgba(0, 0, 0, 0.6);
 }
 
-.negative-edit-header p{
-  color:rgba(255, 255, 255, 0.7)
+.negative-edit-header p {
+  color: rgba(255, 255, 255, 0.7);
 }
 
 .negative-edit-form {
@@ -591,7 +590,7 @@ a:visited {
   border: none;
   border-bottom: solid 2px rgba(255, 255, 255, 0.7);
   background: transparent;
-  color:rgba(255, 255, 255, 0.7);
+  color: rgba(255, 255, 255, 0.7);
 }
 
 .negative-edit-btns {
@@ -766,11 +765,10 @@ a:visited {
   width: 100%;
   height: 100%;
   overflow: hidden;
-  z-index: -1;
-  /* display: none; */
+  pointer-events: none;
 }
 
-.cubes div {
+.cube {
   position: absolute;
   display: block;
   width: 20px;
@@ -778,7 +776,19 @@ a:visited {
   background: rgba(0, 0, 0, 0.2);
   bottom: -160px;
   animation: animate 25s linear infinite;
-  z-index: -1;
+}
+
+.dark-cube {
+  position: absolute;
+  display: block;
+  width: 20px;
+  height: 20px;
+  background: rgba(255, 255, 255, 0.8);
+  bottom: -160px;
+  animation: animate 25s linear infinite;
+  z-index: 2;
+  cursor: pointer;
+  /* background: teal; */
 }
 
 .cubes div:nth-child(1) {

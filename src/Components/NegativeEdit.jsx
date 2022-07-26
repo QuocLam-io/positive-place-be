@@ -20,6 +20,7 @@ const NegativeEdit = () => {
         todayThree: negativeEditThree,
       })
       .then((res) => {
+        console.log("blub")
         console.log(res);
       })
       .catch((err) => {

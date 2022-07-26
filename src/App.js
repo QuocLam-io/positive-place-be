@@ -75,12 +75,10 @@ function App() {
   };
 
   useEffect(() => {
-    axios
-      .get("/auth/me")
-      .then(({ data }) => {
-        //{data} is destructed response data
-        setIsLoggedIn(data.isLoggedIn);
-      });
+    axios.get("/auth/me").then(({ data }) => {
+      //{data} is destructed response data
+      setIsLoggedIn(data.isLoggedIn);
+    });
   }, []);
 
   // console.log(isLoggedIn, "logging in");
@@ -89,17 +87,18 @@ function App() {
 
   return (
     <div className={`App ${isDarkMode ? "dark-bg" : ""}`}>
+      
       <div className="cubes">
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
+        <div className={`${isDarkMode ? "dark-cube" : "cube"}  `}></div>
+        <div className={`${isDarkMode ? "dark-cube" : "cube"}  `}></div>
+        <div className={`${isDarkMode ? "dark-cube" : "cube"}  `}></div>
+        <div className={`${isDarkMode ? "dark-cube" : "cube"}  `}></div>
+        <div className={`${isDarkMode ? "dark-cube" : "cube"}  `}></div>
+        <div className={`${isDarkMode ? "dark-cube" : "cube"}  `}></div>
+        <div className={`${isDarkMode ? "dark-cube" : "cube"}  `}></div>
+        <div className={`${isDarkMode ? "dark-cube" : "cube"}  `}></div>
+        <div className={`${isDarkMode ? "dark-cube" : "cube"}  `}></div>
+        <div className={`${isDarkMode ? "dark-cube" : "cube"}  `}></div>
       </div>
 
       <ToastContainer
