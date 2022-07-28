@@ -1,8 +1,20 @@
-import React from "react";
+import React, {useEffect} from "react";
 import { Link } from "react-router-dom";
 import axios from "axios";
 
 const NegativeHistory = ({ negativeEntries, setNegativeEntries }) => {
+
+  useEffect(() => {
+    axios
+      .get("/api/negative")
+      .then((response) => {
+        const nEntries = response.data;
+        setNegativeEntries(nEntries);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  }, []);
   // ------------------- Negative Delete Handler (Yonghair is a god) ------------------- */
 
   const negativeDeleteHandler = (e) => {

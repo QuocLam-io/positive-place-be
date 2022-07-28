@@ -40,36 +40,6 @@ function App() {
     "December",
   ];
 
-  /* ----------------------- Positive Entries useEffect ----------------------- */
-
-  useEffect(() => {
-    axios
-      .get("/api/positive")
-      .then((response) => {
-        const pEntries = response.data;
-        setPositiveEntries(pEntries);
-      })
-      .catch((error) => {
-        console.log(error);
-      });
-  }, [positiveEntries]);
-
-
-
-  /* ----------------------- Negative Entries useEffect ----------------------- */
-
-  useEffect(() => {
-    axios
-      .get("/api/negative")
-      .then((response) => {
-        const nEntries = response.data;
-        setNegativeEntries(nEntries);
-      })
-      .catch((error) => {
-        console.log(error);
-      });
-  }, [negativeEntries]);
-
   /* ---------------------------- Dark Mode Handler --------------------------- */
 
   const darkModeHandler = () => {
