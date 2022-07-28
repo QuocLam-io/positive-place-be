@@ -58,7 +58,7 @@ function App() {
   //* -------------------------------------------------------------------------- */
 
   return (
-    <div className={`App ${isDarkMode ? "dark-bg" : ""}`}>
+    <div className={`App ${isDarkMode && "dark-bg"}`}>
       <div className="cubes">
         <div className={`${isDarkMode ? "dark-cube" : "cube"}  `}></div>
         <div className={`${isDarkMode ? "dark-cube" : "cube"}  `}></div>
