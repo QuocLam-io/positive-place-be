@@ -52,7 +52,9 @@ function App() {
       .catch((error) => {
         console.log(error);
       });
-  }, []);
+  }, [positiveEntries]);
+
+
 
   /* ----------------------- Negative Entries useEffect ----------------------- */
 
@@ -66,7 +68,7 @@ function App() {
       .catch((error) => {
         console.log(error);
       });
-  }, []);
+  }, [negativeEntries]);
 
   /* ---------------------------- Dark Mode Handler --------------------------- */
 
@@ -87,7 +89,6 @@ function App() {
 
   return (
     <div className={`App ${isDarkMode ? "dark-bg" : ""}`}>
-      
       <div className="cubes">
         <div className={`${isDarkMode ? "dark-cube" : "cube"}  `}></div>
         <div className={`${isDarkMode ? "dark-cube" : "cube"}  `}></div>
@@ -138,7 +139,7 @@ function App() {
                 months={months}
               />
             ) : (
-              <Login setIsLoggedIn={setIsLoggedIn} isDarkMode={isDarkMode} />
+              <Login setIsLoggedIn={setIsLoggedIn} isDarkMode={isDarkMode} setPositiveEntries={setPositiveEntries} />
             )
           }
         />

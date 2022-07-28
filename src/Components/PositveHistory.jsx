@@ -1,8 +1,21 @@
-import React from "react";
+import React, {useEffect} from "react";
 import { Link } from "react-router-dom";
 import axios from "axios";
 
 const PositiveHistory = ({ positiveEntries, setPositiveEntries }) => {
+
+    useEffect(() => {
+    axios
+      .get("/api/positive")
+      .then((response) => {
+        const pEntries = response.data;
+        setPositiveEntries(pEntries);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  }, []);
+  
   // ------------------- Positive Delete Handler (Yonghair is a god) ------------------- */
 
   const positiveDeleteHandler = (e) => {
