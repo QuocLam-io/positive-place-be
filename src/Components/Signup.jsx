@@ -9,7 +9,7 @@ const Signup = ({ isLoggedIn, setIsLoggedIn, isDarkMode }) => {
   const signUpHandler = (e) => {
     e.preventDefault();
     axios
-      .post("/auth/signup", { username: username, password: password })
+      .post("https://positive-place-be.herokuapp.com/auth/signup", { username: username, password: password })
       .then((results) => {
         setIsLoggedIn(true);
       })
