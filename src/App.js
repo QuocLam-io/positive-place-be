@@ -47,8 +47,7 @@ function App() {
   };
 
   useEffect(() => {
-    axios.get("/auth/me").then(({ data }) => {
-      //{data} is destructed response data
+    axios.get("https://positive-place-be.herokuapp.com/auth/me").then(({ data }) => {
       setIsLoggedIn(data.isLoggedIn);
     });
   }, []);
