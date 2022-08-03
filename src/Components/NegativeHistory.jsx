@@ -14,6 +14,7 @@ const NegativeHistory = ({ negativeEntries, setNegativeEntries }) => {
       .catch((error) => {
         console.log(error);
       });
+      // eslint-disable-next-line
   }, []);
   // ------------------- Negative Delete Handler (Yonghair is a god) ------------------- */
 

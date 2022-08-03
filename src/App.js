@@ -109,7 +109,11 @@ function App() {
                 months={months}
               />
             ) : (
-              <Login setIsLoggedIn={setIsLoggedIn} isDarkMode={isDarkMode} setPositiveEntries={setPositiveEntries} />
+              <Login
+                setIsLoggedIn={setIsLoggedIn}
+                isDarkMode={isDarkMode}
+                setPositiveEntries={setPositiveEntries}
+              />
             )
           }
         />
