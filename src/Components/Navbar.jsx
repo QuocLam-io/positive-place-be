@@ -10,7 +10,7 @@ const Navbar = ({
   setIsLoggedIn,
 }) => {
   const logOutHandler = () => {
-    axios.post("/auth/logout").then(() => {
+    axios.post("https://positive-place-be.herokuapp.com/auth/logout").then(() => {
       setIsLoggedIn(false);
     });
     // .catch(err => {

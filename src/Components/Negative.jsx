@@ -36,7 +36,7 @@ const Negative = ({ negativeEntries,setNegativeEntries, months, isDarkMode }) =>
   const handleNegative = (e) => {
     e.preventDefault();
     axios
-      .post("/api/negative", {
+      .post("https://positive-place-be.herokuapp.com/api/negative", {
         todayOne: negativeOne,
         todayTwo: negativeTwo,
         todayThree: negativeThree,
