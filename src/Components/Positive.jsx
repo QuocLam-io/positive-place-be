@@ -46,6 +46,7 @@ const Positive = ({ positiveEntries, setPositiveEntries, months }) => {
         setPositiveEntries([...positiveEntries, res.data]);
         console.log(res.data);
       });
+      console.log(session.userId);
       console.log(sessionStorage);
     positiveModalOpen ? modalClose() : modalOpen();
   };
