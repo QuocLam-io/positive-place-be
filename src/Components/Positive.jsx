@@ -10,6 +10,7 @@ const Positive = ({ positiveEntries, setPositiveEntries, months }) => {
   const [positiveTwo, setPositiveTwo] = useState("");
   const [positiveThree, setPositiveThree] = useState("");
 
+
   const modalOpen = () => {
     setPositiveModalOpen(true);
   };
