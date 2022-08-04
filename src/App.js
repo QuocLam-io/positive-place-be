@@ -52,7 +52,7 @@ function App() {
     });
   }, []);
 
-  console.log(isLoggedIn, "logging in");
+  console.log("is logged in?", isLoggedIn);
 
   //* -------------------------------------------------------------------------- */
 
