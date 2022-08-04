@@ -49,8 +49,15 @@ const Positive = ({ positiveEntries, setPositiveEntries, months }) => {
       console.log(sessionStorage);
       console.log(sessionStorage.getItem("user"));
       console.log(sessionStorage.getItem("userId"));
-      console.log(new Date())
-      console.log(new Date.now())
+      console.log(sessionStorage.getItem("userName"));
+      console.log(sessionStorage.getItem("userEmail"));
+      console.log(sessionStorage.getItem("userPassword"));
+      console.log(sessionStorage.getItem("userRole"));
+      console.log(sessionStorage.getItem("userCreatedAt"));
+      console.log(sessionStorage.getItem("userUpdatedAt"));
+      console.log(sessionStorage.getItem("userDeletedAt"));
+      console.log(sessionStorage.getItem("userToken"));
+      console.log(sessionStorage.getItem("userTokenExpiration"));
     positiveModalOpen ? modalClose() : modalOpen();
   };
   return (
