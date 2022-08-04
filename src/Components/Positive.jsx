@@ -50,7 +50,7 @@ const Positive = ({ positiveEntries, setPositiveEntries, months }) => {
       console.log(sessionStorage.getItem("user"));
       console.log(sessionStorage.getItem("userId"));
       console.log(new Date())
-      console.log(new Date().now())
+      console.log(new Date.now())
     positiveModalOpen ? modalClose() : modalOpen();
   };
   return (
