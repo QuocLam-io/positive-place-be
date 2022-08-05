@@ -1,4 +1,4 @@
-import axios from "axios";
+import axios from "../axios";
 import React, { useState } from "react";
 import moment from "moment";
 import { motion, AnimatePresence } from "framer-motion";
@@ -9,7 +9,6 @@ const Positive = ({ positiveEntries, setPositiveEntries, months }) => {
   const [positiveOne, setPositiveOne] = useState("");
   const [positiveTwo, setPositiveTwo] = useState("");
   const [positiveThree, setPositiveThree] = useState("");
-
 
   const modalOpen = () => {
     setPositiveModalOpen(true);
@@ -46,9 +45,9 @@ const Positive = ({ positiveEntries, setPositiveEntries, months }) => {
         setPositiveEntries([...positiveEntries, res.data]);
         console.log(res.data);
       });
-      console.log(sessionStorage);
-      console.log(sessionStorage.getItem("user"));
-      console.log(sessionStorage.getItem("userId"));
+    console.log(sessionStorage);
+    console.log(sessionStorage.getItem("user"));
+    console.log(sessionStorage.getItem("userId"));
     positiveModalOpen ? modalClose() : modalOpen();
   };
   return (
@@ -96,11 +95,7 @@ const Positive = ({ positiveEntries, setPositiveEntries, months }) => {
         exitBeforeEnter={true}
         onExitComplete={() => null}
       >
-        {positiveModalOpen && (
-          <PositiveModal
-            modalClose={modalClose}
-          />
-        )}
+        {positiveModalOpen && <PositiveModal modalClose={modalClose} />}
       </AnimatePresence>
     </div>
   );

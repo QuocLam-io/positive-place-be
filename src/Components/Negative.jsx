@@ -1,4 +1,4 @@
-import axios from "axios";
+import axios from "../axios";
 import React, { useState } from "react";
 import moment from "moment";
 import { motion, AnimatePresence } from "framer-motion";

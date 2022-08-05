@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
-import axios from "axios";
+import axios from "../axios";
 
 const NegativeEdit = () => {
   const [negativeEditDate, setNegativeEditDate] = useState("");
@@ -20,7 +20,7 @@ const NegativeEdit = () => {
         todayThree: negativeEditThree,
       })
       .then((res) => {
-        console.log("blub")
+        console.log("blub");
         console.log(res);
       })
       .catch((err) => {
@@ -43,7 +43,7 @@ const NegativeEdit = () => {
       .catch((err) => {
         console.log(err);
       });
-      // eslint-disable-next-line
+    // eslint-disable-next-line
   }, []);
   /* -------------------------------------------------------------------------- */
   return (

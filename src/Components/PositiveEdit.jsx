@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
-import axios from "axios";
+import axios from "../axios";
 
 const PositiveEdit = () => {
   const [positiveEditDate, setPositiveEditDate] = useState("");
@@ -42,7 +42,7 @@ const PositiveEdit = () => {
       .catch((err) => {
         console.log(err);
       });
-      // eslint-disable-next-line
+    // eslint-disable-next-line
   }, []);
   /* -------------------------------------------------------------------------- */
   return (

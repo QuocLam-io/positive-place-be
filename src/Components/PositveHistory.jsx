@@ -1,10 +1,9 @@
-import React, {useEffect} from "react";
+import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
-import axios from "axios";
+import axios from "../axios";
 
 const PositiveHistory = ({ positiveEntries, setPositiveEntries }) => {
-
-    useEffect(() => {
+  useEffect(() => {
     axios
       .get("https://positive-place-be.herokuapp.com/api/positive")
       .then((response) => {
@@ -14,9 +13,9 @@ const PositiveHistory = ({ positiveEntries, setPositiveEntries }) => {
       .catch((error) => {
         console.log(error);
       });
-      // eslint-disable-next-line
+    // eslint-disable-next-line
   }, []);
-  
+
   // ------------------- Positive Delete Handler (Yonghair is a god) ------------------- */
 
   const positiveDeleteHandler = (e) => {

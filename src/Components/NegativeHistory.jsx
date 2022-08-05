@@ -1,9 +1,8 @@
-import React, {useEffect} from "react";
+import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
-import axios from "axios";
+import axios from "../axios";
 
 const NegativeHistory = ({ negativeEntries, setNegativeEntries }) => {
-
   useEffect(() => {
     axios
       .get("https://positive-place-be.herokuapp.com/api/negative")
@@ -14,23 +13,25 @@ const NegativeHistory = ({ negativeEntries, setNegativeEntries }) => {
       .catch((error) => {
         console.log(error);
       });
-      // eslint-disable-next-line
+    // eslint-disable-next-line
   }, []);
   // ------------------- Negative Delete Handler (Yonghair is a god) ------------------- */
 
   const negativeDeleteHandler = (e) => {
-    axios.delete(`https://positive-place-be.herokuapp.com/api/negative/${e}`).then((res) => {
-      console.log(res);
-      axios
-        .get("https://positive-place-be.herokuapp.com/api/negative")
-        .then((response) => {
-          const nEntries = response.data;
-          setNegativeEntries(nEntries);
-        })
-        .catch((error) => {
-          console.log(error);
-        });
-    });
+    axios
+      .delete(`https://positive-place-be.herokuapp.com/api/negative/${e}`)
+      .then((res) => {
+        console.log(res);
+        axios
+          .get("https://positive-place-be.herokuapp.com/api/negative")
+          .then((response) => {
+            const nEntries = response.data;
+            setNegativeEntries(nEntries);
+          })
+          .catch((error) => {
+            console.log(error);
+          });
+      });
   };
 
   /* -------------------------------- Negative Map ------------------------------- */
@@ -38,7 +39,7 @@ const NegativeHistory = ({ negativeEntries, setNegativeEntries }) => {
     return (
       <div className="negative-history-card">
         <div className="negative-history-card-entries">
-          <p className="history-date" >{entry.day}</p>
+          <p className="history-date">{entry.day}</p>
           <p>1. {entry.todayOne}</p>
           <p>2. {entry.todayTwo}</p>
           <p>3. {entry.todayThree}</p>
