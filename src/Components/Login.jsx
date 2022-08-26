@@ -11,7 +11,7 @@ const Login = ({ setIsLoggedIn, isDarkMode, setPositiveEntries }) => {
   /* ------------------------------- Throw Toast ------------------------------ */
   const notify = () => {
     toast();
-    toast.error("Warning! Nobody loves you! 😬", {
+    toast.error("Sad. Me Sad.", {
       position: "top-right",
       autoClose: 5000,
       hideProgressBar: false,
