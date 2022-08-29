@@ -28,7 +28,10 @@ const Login = ({ setIsLoggedIn, isDarkMode, setPositiveEntries }) => {
     e.preventDefault();
 
     axios
-      .post("https://positive-place-be.herokuapp.com/auth/login", { username: username, password: password })
+      .post("https://positive-place-be.netlify.app/auth/login", {
+        username: username,
+        password: password,
+      })
       .then((results) => {
         setIsLoggedIn(true);
       })

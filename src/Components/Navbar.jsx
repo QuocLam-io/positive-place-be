@@ -2,7 +2,6 @@ import React from "react";
 import { Link } from "react-router-dom";
 import axios from "../axios";
 
-
 const Navbar = ({
   isDarkMode,
   setIsDarkMode,
@@ -11,7 +10,7 @@ const Navbar = ({
   setIsLoggedIn,
 }) => {
   const logOutHandler = () => {
-    axios.post("https://positive-place-be.herokuapp.com/auth/logout").then(() => {
+    axios.post("https://positive-place-be.netlify.app/auth/logout").then(() => {
       setIsLoggedIn(false);
     });
     // .catch(err => {

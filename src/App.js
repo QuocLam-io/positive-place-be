@@ -47,9 +47,11 @@ function App() {
   };
 
   useEffect(() => {
-    axios.get("https://positive-place-be.herokuapp.com/auth/me").then(({ data }) => {
-      setIsLoggedIn(data.isLoggedIn);
-    });
+    axios
+      .get("https://positive-place-be.netlify.app/auth/me")
+      .then(({ data }) => {
+        setIsLoggedIn(data.isLoggedIn);
+      });
   }, []);
 
   console.log("is logged in?", isLoggedIn);

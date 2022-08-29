@@ -4,7 +4,12 @@ import moment from "moment";
 import { motion, AnimatePresence } from "framer-motion";
 import PositiveModal from "./PositiveModal";
 
-const Negative = ({ negativeEntries,setNegativeEntries, months, isDarkMode }) => {
+const Negative = ({
+  negativeEntries,
+  setNegativeEntries,
+  months,
+  isDarkMode,
+}) => {
   const [positiveModalOpen, setPositiveModalOpen] = useState(false);
   const [negativeOne, setNegativeOne] = useState("");
   const [negativeTwo, setNegativeTwo] = useState("");
@@ -36,7 +41,7 @@ const Negative = ({ negativeEntries,setNegativeEntries, months, isDarkMode }) =>
   const handleNegative = (e) => {
     e.preventDefault();
     axios
-      .post("https://positive-place-be.herokuapp.com/api/negative", {
+      .post("https://positive-place-be.netlify.app/api/negative", {
         todayOne: negativeOne,
         todayTwo: negativeTwo,
         todayThree: negativeThree,
@@ -77,10 +82,12 @@ const Negative = ({ negativeEntries,setNegativeEntries, months, isDarkMode }) =>
           placeholder="3. If you have to keep asking questions you're not getting anywhere"
         />
 
-        <motion.button 
-                  whileHover={{ scale: 1.1 }}
-                  whileTap={{ scale: 0.9 }}
-        className="login-butt" type="submit">
+        <motion.button
+          whileHover={{ scale: 1.1 }}
+          whileTap={{ scale: 0.9 }}
+          className="login-butt"
+          type="submit"
+        >
           Done
         </motion.button>
       </form>
@@ -90,11 +97,7 @@ const Negative = ({ negativeEntries,setNegativeEntries, months, isDarkMode }) =>
         exitBeforeEnter={true}
         onExitComplete={() => null}
       >
-        {positiveModalOpen && (
-          <PositiveModal
-            modalClose={modalClose}
-          />
-        )}
+        {positiveModalOpen && <PositiveModal modalClose={modalClose} />}
       </AnimatePresence>
     </div>
   );
