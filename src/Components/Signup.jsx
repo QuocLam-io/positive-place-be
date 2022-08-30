@@ -9,7 +9,7 @@ const Signup = ({ isLoggedIn, setIsLoggedIn, isDarkMode }) => {
   const signUpHandler = (e) => {
     e.preventDefault();
     axios
-      .post("https://positive-place-be.netlify.app/auth/signup", {
+      .post("https://positive-place-be.herokuapp.com/auth/signup", {
         username: username,
         password: password,
       })

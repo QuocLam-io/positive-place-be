@@ -41,7 +41,7 @@ const Negative = ({
   const handleNegative = (e) => {
     e.preventDefault();
     axios
-      .post("https://positive-place-be.netlify.app/api/negative", {
+      .post("https://positive-place-be.herokuapp.com/api/negative", {
         todayOne: negativeOne,
         todayTwo: negativeTwo,
         todayThree: negativeThree,

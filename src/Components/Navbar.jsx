@@ -10,9 +10,11 @@ const Navbar = ({
   setIsLoggedIn,
 }) => {
   const logOutHandler = () => {
-    axios.post("https://positive-place-be.netlify.app/auth/logout").then(() => {
-      setIsLoggedIn(false);
-    });
+    axios
+      .post("https://positive-place-be.herokuapp.com/auth/logout")
+      .then(() => {
+        setIsLoggedIn(false);
+      });
     // .catch(err => {
 
     // }); Figure toast notification for error
