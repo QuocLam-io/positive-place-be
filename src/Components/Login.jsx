@@ -4,7 +4,7 @@ import axios from "../axios";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
-const Login = ({ setIsLoggedIn, isDarkMode, setPositiveEntries }) => {
+const Login = ({ setIsLoggedIn, isDarkMode, setPositiveEntries, logoText }) => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
 
@@ -46,8 +46,13 @@ const Login = ({ setIsLoggedIn, isDarkMode, setPositiveEntries }) => {
     <div className={`login-parent ${isDarkMode ? "text-white" : ""} `}>
 
       <div className={`mobile-logo`}>
-        <div className="mobile-logo-top"></div>
-        <div className="mobile-logo-bottom"></div>
+        <div className="mobile-logo-top">
+          <p>{logoText[0]}</p>
+        </div>
+        <div className="mobile-logo-bottom">
+        <p>{logoText[1]}</p>
+
+        </div>
       </div>
       
       <form className="login-form" onSubmit={loginHandler}>

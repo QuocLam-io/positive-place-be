@@ -25,6 +25,7 @@ function App() {
   const [isDarkMode, setIsDarkMode] = useState(false);
   const [positiveEntries, setPositiveEntries] = useState([]);
   const [negativeEntries, setNegativeEntries] = useState([]);
+  const [logoText, setLogoText] = useState(["Positive", "Place"]);
   const months = [
     "January",
     "February",
@@ -42,8 +43,16 @@ function App() {
 
   /* ---------------------------- Dark Mode Handler --------------------------- */
 
+  console.log(isDarkMode);
+  console.log(logoText);
   const darkModeHandler = () => {
     setIsDarkMode(!isDarkMode);
+
+    if (isDarkMode) {
+      setLogoText(["Positive", "Place"]);
+    } else {
+      setLogoText(["Negative", "Space"]);
+    }
   };
 
   useEffect(() => {
@@ -114,6 +123,7 @@ function App() {
                 setIsLoggedIn={setIsLoggedIn}
                 isDarkMode={isDarkMode}
                 setPositiveEntries={setPositiveEntries}
+                logoText={logoText}
               />
             )
           }

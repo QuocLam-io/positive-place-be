@@ -36,7 +36,6 @@ a:visited {
 
 /* --------------------------------- Navbar --------------------------------- */
 
-
 .navbar-parent {
   display: flex;
   flex-direction: column;
@@ -47,10 +46,10 @@ a:visited {
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3);
 }
 
-.nav-hidden{
+.nav-hidden {
   @media screen and (max-width: $mobile-portrait) {
     display: none;
-     }
+  }
 }
 
 .nav-top-butts {
@@ -129,13 +128,29 @@ a:visited {
   display: flex;
   flex-direction: column;
   width: 85%;
+  @media screen and (max-width: $mobile-portrait) {
+    width: 100%;
+  }
   /* border: teal solid 2px; */
 
-  .mobile-logo{
-  border: teal solid 4px;
+  .mobile-logo {
+    display: flex;
+    flex-direction: column;
+    // border: teal solid 4px;
+    width: 100%;
+    height: 15%;
+
+    .mobile-logo-top {
+      border: orange 4px solid;
+      height: 50%;
+    }
+
+    .mobile-logo-bottom {
+      border: orange 4px solid;
+      height: 50%;
+    }
   }
 }
-
 
 .login-form {
   display: flex;
