@@ -11,7 +11,7 @@ const Login = ({ setIsLoggedIn, isDarkMode, setPositiveEntries }) => {
   /* ------------------------------- Throw Toast ------------------------------ */
   const notify = () => {
     toast();
-    toast.error("Sad. Me Sad.", {
+    toast.error("Sorry, no user found by that name", {
       position: "top-right",
       autoClose: 5000,
       hideProgressBar: false,
