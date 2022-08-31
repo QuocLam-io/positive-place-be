@@ -129,9 +129,13 @@ a:visited {
   display: flex;
   flex-direction: column;
   width: 85%;
-  /* color: white; */
   /* border: teal solid 2px; */
+
+  .mobile-logo{
+  border: teal solid 4px;
+  }
 }
+
 
 .login-form {
   display: flex;

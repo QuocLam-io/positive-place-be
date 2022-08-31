@@ -44,6 +44,12 @@ const Login = ({ setIsLoggedIn, isDarkMode, setPositiveEntries }) => {
 
   return (
     <div className={`login-parent ${isDarkMode ? "text-white" : ""} `}>
+
+      <div className={`mobile-logo`}>
+        <div className="mobile-logo-top"></div>
+        <div className="mobile-logo-bottom"></div>
+      </div>
+      
       <form className="login-form" onSubmit={loginHandler}>
         <p className="welcome">Welcome Back</p>
 
