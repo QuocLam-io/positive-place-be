@@ -1,3 +1,5 @@
+$mobile-portrait: 420px;
+
 * {
   margin: 0;
   padding: 0;
@@ -42,6 +44,11 @@ a:visited {
   width: 15%;
   font-family: "Work Sans", sans-serif;
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3);
+
+  @media screen and (max-width: $mobile-portrait) {
+    display: none;
+  }
+
 }
 
 .nav-top-butts {
