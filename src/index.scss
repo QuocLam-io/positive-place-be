@@ -36,6 +36,7 @@ a:visited {
 
 /* --------------------------------- Navbar --------------------------------- */
 
+
 .navbar-parent {
   display: flex;
   flex-direction: column;
@@ -44,11 +45,12 @@ a:visited {
   width: 15%;
   font-family: "Work Sans", sans-serif;
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3);
+}
 
+.nav-hidden{
   @media screen and (max-width: $mobile-portrait) {
     display: none;
-  }
-
+     }
 }
 
 .nav-top-butts {

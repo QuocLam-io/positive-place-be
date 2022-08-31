@@ -22,7 +22,9 @@ const Navbar = ({
 
   return (
     <div
-      className={`navbar-parent ${isDarkMode ? "nav-dark" : "nav-light"}
+      className={`navbar-parent 
+      ${isDarkMode ? "nav-dark" : "nav-light"}
+      ${isLoggedIn ? "" : "nav-hidden"}
       `}
     >
       <div className="nav-top-butts">
