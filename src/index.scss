@@ -345,11 +345,13 @@ a:visited {
 .positive-input-form {
   display: flex;
   flex-direction: column;
-  /* justify-content: space-around; */
   margin-top: 1.5rem;
   margin-left: 5%;
   gap: 2rem;
-  /* border: teal solid 2px; */
+  @media screen and (max-width: $mobile-portrait) {
+    width: 100%;
+  }
+  border: teal solid 2px;
 }
 
 .positive-input-form input {

@@ -63,10 +63,6 @@ const Navbar = ({
         >
           <button>Homer Simpson</button>
         </Link>
-
-        <button className="merp" onClick={darkModeHandler}>
-          Mr. Merp
-        </button>
       </div>
       <Link to="/" className={`signout-butt ${isLoggedIn ? "" : "hidden"}`}>
         <button onClick={logOutHandler}>Log out</button>
