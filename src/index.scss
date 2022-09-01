@@ -221,11 +221,37 @@ a:visited {
 
 /* ------------------------------- Signup Page ------------------------------ */
 
+
+
+
 .signup-parent {
   display: flex;
   flex-direction: column;
   width: 85%;
-  /* border: teal solid 2px; */
+  @media screen and (max-width: $mobile-portrait) {
+    width: 100%;
+  }
+  border: teal solid 2px;
+
+
+  .mobile-logo {
+    @media screen and (min-width: $mobile-portrait) {
+      display: none;
+    }
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    // border: teal solid 4px;
+    width: 100%;
+    height: 10%;
+    padding: 5%;
+
+    img {
+      // height: 100%;
+      width: 60%;
+    }
+
+}
 }
 
 .signup-form {
