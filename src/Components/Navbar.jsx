@@ -57,7 +57,7 @@ const Navbar = ({ isDarkMode, isLoggedIn, setIsLoggedIn }) => {
       </div>
       <Link to="/" className={`signout-butt ${isLoggedIn ? "" : "hidden"}`}>
         <button
-          style={`${isDarkMode && "color: #fff"}`}
+        className={`${isDarkMode && "text-white"}`}
           onClick={logOutHandler}
         >
           Log out
