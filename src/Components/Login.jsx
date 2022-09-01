@@ -46,13 +46,19 @@ const Login = ({ setIsLoggedIn, isDarkMode, setPositiveEntries, logoText }) => {
     <div className={`login-parent ${isDarkMode ? "text-white" : ""} `}>
 
       <div className={`mobile-logo`}>
-        <div className="mobile-logo-top">
+      <img 
+            src={`${
+              isDarkMode ? "imgs/logo-negative.png" : "imgs/logo-positive.png"
+            }`}
+            alt="blub"
+          />
+        {/* <div className="mobile-logo-top">
           <p>{logoText[0]}</p>
         </div>
         <div className="mobile-logo-bottom">
         <p>{logoText[1]}</p>
 
-        </div>
+        </div> */}
       </div>
       
       <form className="login-form" onSubmit={loginHandler}>

@@ -136,19 +136,25 @@ a:visited {
   .mobile-logo {
     display: flex;
     flex-direction: column;
-    // border: teal solid 4px;
+    border: teal solid 4px;
     width: 100%;
     height: 15%;
+    padding: 5%;
 
-    .mobile-logo-top {
-      border: orange 4px solid;
-      height: 50%;
+    img{
+      // height: 100%;
+      width: 30%;
     }
 
-    .mobile-logo-bottom {
-      border: orange 4px solid;
-      height: 50%;
-    }
+    // .mobile-logo-top {
+    //   border: orange 4px solid;
+    //   height: 50%;
+    // }
+
+    // .mobile-logo-bottom {
+    //   border: orange 4px solid;
+    //   height: 50%;
+    // }
   }
 }
 
