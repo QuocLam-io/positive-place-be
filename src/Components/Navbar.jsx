@@ -2,22 +2,13 @@ import React from "react";
 import { Link } from "react-router-dom";
 import axios from "../axios";
 
-const Navbar = ({
-  isDarkMode,
-  setIsDarkMode,
-  darkModeHandler,
-  isLoggedIn,
-  setIsLoggedIn,
-}) => {
+const Navbar = ({ isDarkMode, isLoggedIn, setIsLoggedIn }) => {
   const logOutHandler = () => {
     axios
       .post("https://positive-place-be.herokuapp.com/auth/logout")
       .then(() => {
         setIsLoggedIn(false);
       });
-    // .catch(err => {
-
-    // }); Figure toast notification for error
   };
 
   return (
@@ -65,7 +56,12 @@ const Navbar = ({
         </Link>
       </div>
       <Link to="/" className={`signout-butt ${isLoggedIn ? "" : "hidden"}`}>
-        <button onClick={logOutHandler}>Log out</button>
+        <button
+          style={`{isDarkMode && "background-color: #fff"`}
+          onClick={logOutHandler}
+        >
+          Log out
+        </button>
       </Link>
     </div>
   );
