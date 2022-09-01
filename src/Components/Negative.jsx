@@ -79,7 +79,7 @@ const Negative = ({
             setNegativeThree(e.target.value);
           }}
           type="text"
-          placeholder="3. If you have to keep asking questions you're not getting anywhere"
+          placeholder="3. Remember, there's a &ldquo;u&rdquo; in failure"
         />
 
         <motion.button

@@ -77,7 +77,7 @@ const Positive = ({ positiveEntries, setPositiveEntries, months }) => {
             setPositiveThree(e.target.value);
           }}
           type="text"
-          placeholder="3. The soft glow of blue fire on the kitchen stove while cooking at night"
+          placeholder="3. The soft glow of blue fire at night"
         />
 
         <motion.button
