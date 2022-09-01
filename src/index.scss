@@ -134,6 +134,9 @@ a:visited {
   /* border: teal solid 2px; */
 
   .mobile-logo {
+    @media screen and (min-width: $mobile-portrait) {
+      display: none;
+    }
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -142,7 +145,7 @@ a:visited {
     height: 10%;
     padding: 5%;
 
-    img{
+    img {
       // height: 100%;
       width: 60%;
     }
@@ -159,7 +162,7 @@ a:visited {
   }
 }
 
-.flex-end{
+.flex-end {
   align-items: flex-end;
 }
 
