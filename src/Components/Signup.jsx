@@ -31,6 +31,17 @@ const Signup = ({ isLoggedIn, setIsLoggedIn, isDarkMode }) => {
     <div className={`signup-parent ${isDarkMode ? "text-white" : ""}`}>
       {isLoggedIn && <Navigate to="/" />}
 
+      <div 
+       className={`mobile-logo ${isDarkMode && "flex-end"}`}>
+        <img
+    
+          src={`${
+            isDarkMode ? "imgs/logo-negative.png" : "imgs/logo-positive.png"
+          }`}
+          alt="blub"
+        />
+      </div>
+
       <form className="signup-form" onSubmit={signUpHandler}>
         <p className="create-account">Create an account</p>
 
