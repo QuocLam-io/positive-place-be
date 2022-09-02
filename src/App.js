@@ -17,6 +17,7 @@ import NegativeEdit from "./Components/NegativeEdit";
 import RememberWhy from "./Components/RememberWhy";
 import PositiveHistory from "./Components/PositveHistory";
 import NegativeHistory from "./Components/NegativeHistory";
+import Merp from "./Components/Merp";
 
 //* --------------------------------- States --------------------------------- */
 
@@ -25,7 +26,6 @@ function App() {
   const [isDarkMode, setIsDarkMode] = useState(false);
   const [positiveEntries, setPositiveEntries] = useState([]);
   const [negativeEntries, setNegativeEntries] = useState([]);
-  const [logoText, setLogoText] = useState(["Positive", "Place"]);
   const months = [
     "January",
     "February",
@@ -43,16 +43,9 @@ function App() {
 
   /* ---------------------------- Dark Mode Handler --------------------------- */
 
-  console.log(isDarkMode);
-  console.log(logoText);
   const darkModeHandler = () => {
     setIsDarkMode(!isDarkMode);
 
-    if (isDarkMode) {
-      setLogoText(["Positive", "Place"]);
-    } else {
-      setLogoText(["Negative", "Space"]);
-    }
   };
 
   useEffect(() => {
@@ -123,7 +116,6 @@ function App() {
                 setIsLoggedIn={setIsLoggedIn}
                 isDarkMode={isDarkMode}
                 setPositiveEntries={setPositiveEntries}
-                logoText={logoText}
               />
             )
           }
@@ -173,8 +165,12 @@ function App() {
         <Route path="/remember-why" element={<RememberWhy />} />
       </Routes>
       <button className="merp" onClick={darkModeHandler}>
-          Mr. Merp
-        </button>
+        Mr. Merp
+      </button>
+      {/* <Merp 
+      isDarkMode={isDarkMode}
+      setIsDarkMode={setIsDarkMode}
+      /> */}
     </div>
   );
 }

@@ -13,8 +13,9 @@ const Navbar = ({ isDarkMode, isLoggedIn, setIsLoggedIn }) => {
 
   return (
     <div
-      className={`navbar-parent nav-hidden
+      className={`navbar-parent 
       ${isDarkMode ? "nav-dark" : "nav-light"}
+      ${isLoggedIn ? "nav-mobile" : "nav-hidden"}
       `}
     >
       <div className="nav-top-butts">
