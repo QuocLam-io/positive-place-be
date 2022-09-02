@@ -27,34 +27,35 @@ const Navbar = ({ isDarkMode, isLoggedIn, setIsLoggedIn }) => {
             alt="blub"
           />
         </Link>
+        <div className="nav-test">
+          <Link
+            to="/signup"
+            className={`signin-butt ${isLoggedIn ? "hidden" : ""} ${
+              isDarkMode ? "dark-bg" : ""
+            }`}
+          >
+            <button onClick={logOutHandler}>Sign Up</button>
+          </Link>
 
-        <Link
-          to="/signup"
-          className={`signin-butt ${isLoggedIn ? "hidden" : ""} ${
-            isDarkMode ? "dark-bg" : ""
-          }`}
-        >
-          <button onClick={logOutHandler}>Sign Up</button>
-        </Link>
-
-        <Link
-          to="/"
-          className={`signout-butt grey ${isLoggedIn ? "" : "hidden"}`}
-        >
-          <button>Write a post</button>
-        </Link>
-        <Link
-          to="/history-page"
-          className={`signout-butt ${isLoggedIn ? "" : "hidden"}`}
-        >
-          <button>My Entries</button>
-        </Link>
-        <Link
-          to="/remember-why"
-          className={`signout-butt ${isLoggedIn ? "" : "hidden"}`}
-        >
-          <button>Homer Simpson</button>
-        </Link>
+          <Link
+            to="/"
+            className={`signout-butt grey ${isLoggedIn ? "" : "hidden"}`}
+          >
+            <button>Write a post</button>
+          </Link>
+          <Link
+            to="/history-page"
+            className={`signout-butt ${isLoggedIn ? "" : "hidden"}`}
+          >
+            <button>My Entries</button>
+          </Link>
+          <Link
+            to="/remember-why"
+            className={`signout-butt ${isLoggedIn ? "" : "hidden"}`}
+          >
+            <button>Homer Simpson</button>
+          </Link>
+        </div>
       </div>
       <Link to="/" className={`signout-butt ${isLoggedIn ? "" : "hidden"}`}>
         <button
