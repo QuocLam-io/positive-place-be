@@ -27,7 +27,7 @@ const Navbar = ({ isDarkMode, isLoggedIn, setIsLoggedIn }) => {
             alt="blub"
           />
         </Link>
-        <div className="nav-test">
+        <div className="nav-links-mobile-hidden">
           <Link
             to="/signup"
             className={`signin-butt ${isLoggedIn ? "hidden" : ""} ${
@@ -57,7 +57,12 @@ const Navbar = ({ isDarkMode, isLoggedIn, setIsLoggedIn }) => {
           </Link>
         </div>
       </div>
-      <Link to="/" className={`signout-butt ${isLoggedIn ? "" : "hidden"}`}>
+      <Link
+        to="/"
+        className={`signout-butt nav-links-mobile-hidden ${
+          isLoggedIn ? "" : "hidden"
+        }`}
+      >
         <button
           className={`${isDarkMode && "text-white"}`}
           onClick={logOutHandler}
