@@ -18,7 +18,7 @@ const Navbar = ({ isDarkMode, isLoggedIn, setIsLoggedIn }) => {
       ${isLoggedIn ? "nav-mobile" : "nav-hidden"}
       `}
     >
-      <div className="nav-top-butts">
+      <div className="nav-top-btns">
         <Link className="nav-logo" to="/">
           <img
             src={`${
@@ -58,7 +58,7 @@ const Navbar = ({ isDarkMode, isLoggedIn, setIsLoggedIn }) => {
       </div>
       <Link to="/" className={`signout-butt ${isLoggedIn ? "" : "hidden"}`}>
         <button
-        className={`${isDarkMode && "text-white"}`}
+          className={`${isDarkMode && "text-white"}`}
           onClick={logOutHandler}
         >
           Log out
