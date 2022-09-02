@@ -17,10 +17,9 @@ body {
 .App {
   display: flex;
   height: 100%;
-  /* background: rgba(255, 255, 255, 0.5); */
-  /* background: rgba(0, 0, 0, 0.25); */
-  /* background: #262626; */
-  /* background: #f5f5f5; */
+  @media screen and (max-width: $mobile-portrait) {
+    flex-direction: column;
+  }
 }
 
 /* font-family: 'Open Sans', sans-serif; */
@@ -813,12 +812,10 @@ a:visited {
   width: 50px;
   border: teal solid 2px;
 
-  .merp-top{
-
+  .merp-top {
   }
 
-  .merp-bottom{
-
+  .merp-bottom {
   }
 }
 /* -------------------------------------------------------------------------- */
