@@ -27,7 +27,9 @@ const Navbar = ({ isDarkMode, isLoggedIn, setIsLoggedIn }) => {
             alt="blub"
           />
         </Link>
-        <div className="nav-links-mobile-hidden">
+        <div
+        //  className="nav-links-mobile-hidden"
+        >
           <Link
             to="/signup"
             className={`signin-butt ${isLoggedIn ? "hidden" : ""} ${
