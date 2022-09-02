@@ -82,7 +82,7 @@ const NegativeEdit = () => {
           placeholder="Negative Three"
         />
         <div className="negative-edit-btns">
-          <button className="login-butt" type="submit">
+          <button className="login-btn" type="submit">
             Done
           </button>
         </div>

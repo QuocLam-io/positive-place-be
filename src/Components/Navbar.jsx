@@ -27,12 +27,10 @@ const Navbar = ({ isDarkMode, isLoggedIn, setIsLoggedIn }) => {
             alt="blub"
           />
         </Link>
-        <div
-         className="nav-links-mobile-hidden"
-        >
+        <div className="nav-links-mobile-hidden">
           <Link
             to="/signup"
-            className={`signin-butt ${isLoggedIn ? "hidden" : ""} ${
+            className={`signin-btn ${isLoggedIn ? "hidden" : ""} ${
               isDarkMode ? "dark-bg" : ""
             }`}
           >
@@ -41,19 +39,19 @@ const Navbar = ({ isDarkMode, isLoggedIn, setIsLoggedIn }) => {
 
           <Link
             to="/"
-            className={`signout-butt grey ${isLoggedIn ? "" : "hidden"}`}
+            className={`signout-btn grey ${isLoggedIn ? "" : "hidden"}`}
           >
             <button>Write a post</button>
           </Link>
           <Link
             to="/history-page"
-            className={`signout-butt ${isLoggedIn ? "" : "hidden"}`}
+            className={`signout-btn ${isLoggedIn ? "" : "hidden"}`}
           >
             <button>My Entries</button>
           </Link>
           <Link
             to="/remember-why"
-            className={`signout-butt ${isLoggedIn ? "" : "hidden"}`}
+            className={`signout-btn ${isLoggedIn ? "" : "hidden"}`}
           >
             <button>Homer Simpson</button>
           </Link>
@@ -61,7 +59,7 @@ const Navbar = ({ isDarkMode, isLoggedIn, setIsLoggedIn }) => {
       </div>
       <Link
         to="/"
-        className={`signout-butt nav-links-mobile-hidden ${
+        className={`signout-btn nav-links-mobile-hidden ${
           isLoggedIn ? "" : "hidden"
         }`}
       >

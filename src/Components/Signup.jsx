@@ -31,10 +31,8 @@ const Signup = ({ isLoggedIn, setIsLoggedIn, isDarkMode }) => {
     <div className={`signup-parent ${isDarkMode ? "text-white" : ""}`}>
       {isLoggedIn && <Navigate to="/" />}
 
-      <div 
-       className={`mobile-logo ${isDarkMode && "flex-end"}`}>
+      <div className={`mobile-logo ${isDarkMode && "flex-end"}`}>
         <img
-    
           src={`${
             isDarkMode ? "imgs/logo-negative.png" : "imgs/logo-positive.png"
           }`}
@@ -62,7 +60,7 @@ const Signup = ({ isLoggedIn, setIsLoggedIn, isDarkMode }) => {
           }}
         />
 
-        <button className="signup-butt" type="submit">
+        <button className="signup-btn" type="submit">
           Sign Up
         </button>
       </form>

@@ -81,7 +81,7 @@ const PositiveEdit = () => {
           placeholder="Positive Three"
         />
         <div className="positive-edit-btns">
-          <button className="login-butt" type="submit">
+          <button className="login-btn" type="submit">
             Done
           </button>
         </div>
