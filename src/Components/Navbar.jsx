@@ -28,7 +28,7 @@ const Navbar = ({ isDarkMode, isLoggedIn, setIsLoggedIn }) => {
           />
         </Link>
         <div
-        //  className="nav-links-mobile-hidden"
+         className="nav-links-mobile-hidden"
         >
           <Link
             to="/signup"

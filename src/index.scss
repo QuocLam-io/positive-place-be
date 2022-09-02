@@ -71,7 +71,7 @@ a:visited {
 
 .nav-top-btns {
   display: flex;
-  align-items: center;
+  // align-items: center;
   flex-direction: column;
   gap: 1rem;
   /* border: teal solid 1px; */
@@ -92,7 +92,7 @@ a:visited {
 
 .nav-logo {
   width: 70%;
-  margin-top: 1.5rem;
+  margin: 1.5rem auto 0;
   /* border: teal solid 2px; */
 }
 
@@ -108,7 +108,7 @@ a:visited {
   border: none;
   /* background: rgba(255, 255, 255, 0.5); */
   cursor: pointer;
-  border: teal solid 2px;
+  // border: teal solid 2px;
 }
 
 .signout-butt :nth-child(1) {
