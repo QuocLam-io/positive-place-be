@@ -60,29 +60,26 @@ a:visited {
 
     .nav-top-btns {
       flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
       height: 100%;
       width: 100%;
       border: #008080 dotted 2px;
 
-      .nav-logo{
+      .nav-logo {
         margin: 0;
         border: orange dotted 2px;
 
-        img{
+        img {
           height: 100%;
         }
       }
 
       .hamburger {
-        margin: 0;
         border: orange dotted 2px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 100%;
-        width: 100%;
-        font-size: 2rem;
-        color: #008080;
+        height: 80%;
+        width: 20%;
+        
       }
     }
     .nav-links-mobile-hidden {
