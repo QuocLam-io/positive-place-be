@@ -16,9 +16,12 @@ const Navbar = ({ isDarkMode, isLoggedIn, setIsLoggedIn }) => {
       className={`navbar-parent 
       ${isDarkMode ? "nav-dark" : "nav-light"}
       ${isLoggedIn ? "nav-mobile" : "nav-hidden"}
+  
       `}
     >
-      <div className="nav-top-btns">
+      <div className={`nav-top-btns
+       ${isLoggedIn && isDarkMode ? "justify-end" : ""}
+      `}>
         <Link className="nav-logo" to="/">
           <img
             src={`${
@@ -28,7 +31,7 @@ const Navbar = ({ isDarkMode, isLoggedIn, setIsLoggedIn }) => {
           />
         </Link>
         <div className="hamburger">
-          
+
         </div>
         <div className="nav-links-mobile-hidden">
           <Link

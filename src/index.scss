@@ -82,6 +82,10 @@ a:visited {
         width: 20%;
 
       }
+
+      .justify-end {
+        flex-direction: row-reverse;
+      }
     }
     .nav-links-mobile-hidden {
       display: none;
