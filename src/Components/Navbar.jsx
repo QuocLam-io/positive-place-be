@@ -20,7 +20,7 @@ const Navbar = ({ isDarkMode, isLoggedIn, setIsLoggedIn }) => {
       `}
     >
       <div className={`nav-top-btns
-       ${isLoggedIn && isDarkMode ? "justify-end" : ""}
+       ${isDarkMode && "row-reverse"}
       `}>
         <Link className="nav-logo" to="/">
           <img
