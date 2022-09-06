@@ -19,9 +19,11 @@ const Navbar = ({ isDarkMode, isLoggedIn, setIsLoggedIn }) => {
   
       `}
     >
-      <div className={`nav-top-btns
+      <div
+        className={`nav-top-btns
        ${isDarkMode && "row-reverse"}
-      `}>
+      `}
+      >
         <Link className="nav-logo" to="/">
           <img
             src={`${
@@ -30,8 +32,13 @@ const Navbar = ({ isDarkMode, isLoggedIn, setIsLoggedIn }) => {
             alt="blub"
           />
         </Link>
-        <div className="hamburger">
-
+        <div
+          className={`hamburger 
+        ${isDarkMode && "dark-hamburger"}`}
+        >
+          <div className="patties"></div>
+          <div className="patties"></div>
+          <div className="patties"></div>
         </div>
         <div className="nav-links-mobile-hidden">
           <Link
