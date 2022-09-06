@@ -58,10 +58,6 @@ a:visited {
     width: 100%;
     height: 15%;
 
-    .row-reverse {
-      flex-direction: row-reverse;
-    }
-    
     .nav-top-btns {
       flex-direction: row;
       align-items: center;
@@ -84,11 +80,12 @@ a:visited {
         border: orange dotted 2px;
         height: 80%;
         width: 20%;
-
       }
-
     }
 
+    .row-reverse {
+      flex-direction: row-reverse;
+    }
 
     .nav-links-mobile-hidden {
       display: none;
