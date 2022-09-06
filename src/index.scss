@@ -72,6 +72,18 @@ a:visited {
           height: 100%;
         }
       }
+
+      .hamburger {
+        margin: 0;
+        border: orange dotted 2px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        width: 100%;
+        font-size: 2rem;
+        color: #008080;
+      }
     }
     .nav-links-mobile-hidden {
       display: none;

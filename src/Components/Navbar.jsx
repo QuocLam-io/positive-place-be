@@ -27,6 +27,9 @@ const Navbar = ({ isDarkMode, isLoggedIn, setIsLoggedIn }) => {
             alt="blub"
           />
         </Link>
+        <div className="hamburger">
+          
+        </div>
         <div className="nav-links-mobile-hidden">
           <Link
             to="/signup"
