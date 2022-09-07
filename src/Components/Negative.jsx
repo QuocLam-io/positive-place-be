@@ -60,7 +60,7 @@ const Negative = ({
       </div>
 
       <form onSubmit={handleNegative} className="negative-input-form" action="">
-        <input className="white"
+        <input 
           onChange={(e) => {
             setNegativeOne(e.target.value);
           }}
