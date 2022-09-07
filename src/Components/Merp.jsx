@@ -9,11 +9,11 @@ const Merp = ({isDarkMode, setIsDarkMode} ) => {
           <div className="eye"></div>
         </div>
         <div className={` merp-bottom`}>
-          <label className="switch">
+          <label className="mouth">
             <input type="checkbox" />
             <span
               className="slider round"
-              onClick={() => setIsDarkMode(!isDarkMode)}
+              // onClick={() => setIsDarkMode(!isDarkMode)}
             >
               <div className="ball-slider">
                 <div className="ball"></div>
