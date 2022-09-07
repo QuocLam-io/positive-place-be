@@ -2,15 +2,13 @@ import React from 'react'
 
 const Merp = ({isDarkMode, setIsDarkMode} ) => {
   
-//!Code copied from other repository
-
   return (
     <div className="mr-merp">
-        {/* <div className={`${isDarkMode ? "dark" : "light"} merp-top`}>
+        <div className={`merp-top`}>
           <div className="eye"></div>
           <div className="eye"></div>
         </div>
-        <div className={`${isDarkMode ? "dark" : "light"} merp-bottom`}>
+        <div className={` merp-bottom`}>
           <label className="switch">
             <input type="checkbox" />
             <span
@@ -22,7 +20,7 @@ const Merp = ({isDarkMode, setIsDarkMode} ) => {
               </div>
             </span>
           </label>
-        </div> */}
+        </div>
     </div>
   )
 }

@@ -17,8 +17,7 @@ import NegativeEdit from "./Components/NegativeEdit";
 import RememberWhy from "./Components/RememberWhy";
 import PositiveHistory from "./Components/PositveHistory";
 import NegativeHistory from "./Components/NegativeHistory";
-
-// import Merp from "./Components/Merp";
+import Merp from "./Components/Merp";
 
 //* --------------------------------- States --------------------------------- */
 
@@ -168,10 +167,10 @@ function App() {
       <button className="merp" onClick={darkModeHandler}>
         Mr. Merp
       </button>
-      {/* <Merp 
+      <Merp 
       isDarkMode={isDarkMode}
       setIsDarkMode={setIsDarkMode}
-      /> */}
+      />
     </div>
   );
 }
