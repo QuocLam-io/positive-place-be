@@ -11,7 +11,7 @@ const MobileMenu = ({ menuCloseHandler }) => {
       exit={{ opacity: 0 }}
     >
       <div className="menu-close-btn">
-        <p>close</p>
+        <p>Close</p>
         <button>x</button>
       </div>
       <div className="menu-links">
