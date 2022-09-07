@@ -13,7 +13,9 @@ const MobileMenu = ({ menuCloseHandler, logOutHandler, isDarkMode }) => {
     >
       <div className="menu-close-btn">
         <p onClick={menuCloseHandler}>Close</p>
-        <p className="menu-close-btn" onClick={menuCloseHandler}>x</p>
+        <button 
+        className={`${isDarkMode && "menu-parent-dark"}`}
+        onClick={menuCloseHandler}>x</button>
       </div>
       <div className="menu-links">
         <div className="menu-link" onClick={menuCloseHandler}>
