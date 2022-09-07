@@ -1,6 +1,9 @@
 import React from 'react'
 
 const Merp = ({isDarkMode, setIsDarkMode} ) => {
+  
+//!Code copied from other repository
+
   return (
     <div className="mr-merp">
         {/* <div className={`${isDarkMode ? "dark" : "light"} merp-top`}>

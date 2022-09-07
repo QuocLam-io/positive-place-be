@@ -1,8 +1,20 @@
-import React from "react";
+import React, {useState} from "react";
 import { Link } from "react-router-dom";
 import axios from "../axios";
+import { AnimatePresence} from "framer-motion";
+import MobileMenu from "./MobileMenu";
 
 const Navbar = ({ isDarkMode, isLoggedIn, setIsLoggedIn }) => {
+
+const [menuOpen, setMenuOpen] = useState(false);
+
+const menuOpenHandler = ()=>{
+  setMenuOpen(true);
+}
+const menuCloseHandler = ()=>{
+  setMenuOpen(false);
+}
+
   const logOutHandler = () => {
     axios
       .post("https://positive-place-be.herokuapp.com/auth/logout")
@@ -10,6 +22,8 @@ const Navbar = ({ isDarkMode, isLoggedIn, setIsLoggedIn }) => {
         setIsLoggedIn(false);
       });
   };
+
+
 
   return (
     <div
@@ -33,6 +47,7 @@ const Navbar = ({ isDarkMode, isLoggedIn, setIsLoggedIn }) => {
           />
         </Link>
         <div
+          onClick={menuOpenHandler}
           className={`hamburger 
         ${isDarkMode && "dark-hamburger"}
         `}
@@ -97,6 +112,14 @@ const Navbar = ({ isDarkMode, isLoggedIn, setIsLoggedIn }) => {
           Log out
         </button>
       </Link>
+
+      <AnimatePresence
+        inital={false}
+        exitBeforeEnter={true}
+        onExitComplete={() => null}
+      >
+        {menuOpen && <MobileMenu menuCloseHandler={menuCloseHandler} />}
+      </AnimatePresence>
     </div>
   );
 };
