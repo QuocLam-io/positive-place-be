@@ -3,7 +3,8 @@ import React from 'react'
 const Merp = ({isDarkMode, setIsDarkMode} ) => {
   
   return (
-    <div className="mr-merp">
+    <div className={`mr-merp 
+    ${isDarkMode && "dark-merp"}`}>
         <div className={`merp-top`}>
           <div className="eye"></div>
           <div className="eye"></div>
