@@ -164,9 +164,6 @@ function App() {
 
         <Route path="/remember-why" element={<RememberWhy />} />
       </Routes>
-      <button className="merp" onClick={darkModeHandler}>
-        Mr. Merp
-      </button>
       <Merp 
       isDarkMode={isDarkMode}
       setIsDarkMode={setIsDarkMode}

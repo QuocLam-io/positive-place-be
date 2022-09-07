@@ -13,7 +13,7 @@ const Merp = ({isDarkMode, setIsDarkMode} ) => {
             <input type="checkbox" />
             <span
               className="slider round"
-              // onClick={() => setIsDarkMode(!isDarkMode)}
+              onClick={() => setIsDarkMode(!isDarkMode)}
             >
               <div className="ball-slider">
                 <div className="ball"></div>
