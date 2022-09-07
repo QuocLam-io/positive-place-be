@@ -5,14 +5,13 @@ const MobileMenu = ({ menuCloseHandler }) => {
   return (
     <motion.div
       className="menu-parent"
-      // onClick={menuCloseHandler}
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
     >
       <div className="menu-close-btn">
         <p>Close</p>
-        <button>x</button>
+        <button onClick={menuCloseHandler}>x</button>
       </div>
       <div className="menu-links">
         <div className="menu-link">Home</div>
