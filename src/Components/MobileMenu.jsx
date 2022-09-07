@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 
 const MobileMenu = ({ menuCloseHandler }) => {
@@ -10,12 +11,16 @@ const MobileMenu = ({ menuCloseHandler }) => {
       exit={{ opacity: 0 }}
     >
       <div className="menu-close-btn">
-        <p>Close</p>
+        <p onClick={menuCloseHandler}>Close</p>
         <button onClick={menuCloseHandler}>x</button>
       </div>
       <div className="menu-links">
-        <div className="menu-link">Home</div>
-        <div className="menu-link">My Entries</div>
+        <div className="menu-link">
+          <Link to="/">Home</Link>
+        </div>
+        <div className="menu-link">
+          <Link to="/history-page">My Entries</Link>
+        </div>
         <div className="menu-link">Log out</div>
       </div>
     </motion.div>
