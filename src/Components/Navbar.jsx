@@ -34,9 +34,14 @@ const Navbar = ({ isDarkMode, isLoggedIn, setIsLoggedIn }) => {
         </Link>
         <div
           className={`hamburger 
-        ${isDarkMode && "dark-hamburger"}`}
+        ${isDarkMode && "dark-hamburger"}
+        `}
         >
-          <div className="patties"></div>
+          <div
+            className={`
+            ${isDarkMode && "dark-patty"}
+          `}
+          ></div>
           <div className="patties"></div>
           <div className="patties"></div>
         </div>
