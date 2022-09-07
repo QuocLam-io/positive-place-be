@@ -98,11 +98,9 @@ a:visited {
         .dark-patty {
           width: 100%;
           height: 15%;
-          background: rgba(255, 255, 255, .8);
+          background: rgba(255, 255, 255, 0.8);
           border-radius: 10px;
-
         }
-
       }
     }
 
@@ -1086,16 +1084,19 @@ a:visited {
 
 /* ---------------------------------- Menu ---------------------------------- */
 
-.menu-parent{
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100vh;
-  width: 100vw;
-  background: #000000e1;
+.menu-parent {
   display: flex;
   align-items: center;
   justify-content: center;
+  height: 100vh;
+  width: 100vw;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(8px);
 }
+
+
 
 /* -------------------------------------------------------------------------- */
