@@ -2,10 +2,11 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 
-const MobileMenu = ({ menuCloseHandler, logOutHandler }) => {
+const MobileMenu = ({ menuCloseHandler, logOutHandler, isDarkMode }) => {
   return (
     <motion.div
-      className="menu-parent"
+      className={`menu-parent
+      ${isDarkMode && "menu-parent-dark"}`}
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}

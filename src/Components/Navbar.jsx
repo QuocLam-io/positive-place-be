@@ -118,7 +118,9 @@ const menuCloseHandler = ()=>{
         exitBeforeEnter={true}
         onExitComplete={() => null}
       >
-        {menuOpen && <MobileMenu menuCloseHandler={menuCloseHandler}
+        {menuOpen && <MobileMenu 
+        isDarkMode={isDarkMode}
+        menuCloseHandler={menuCloseHandler}
         logOutHandler={logOutHandler} />}
       </AnimatePresence>
     </div>
