@@ -39,11 +39,11 @@ const Navbar = ({ isDarkMode, isLoggedIn, setIsLoggedIn }) => {
         >
           <div
             className={`
-            ${isDarkMode && "dark-patty"}
+            ${isDarkMode ? "dark-patty" : "patty"}
           `}
           ></div>
-          <div className="patties"></div>
-          <div className="patties"></div>
+          <div className="patty"></div>
+          <div className="patty"></div>
         </div>
         <div className="nav-links-mobile-hidden">
           <Link
