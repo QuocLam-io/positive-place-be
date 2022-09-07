@@ -15,10 +15,10 @@ const MobileMenu = ({ menuCloseHandler, logOutHandler }) => {
         <button onClick={menuCloseHandler}>x</button>
       </div>
       <div className="menu-links">
-        <div className="menu-link">
+        <div className="menu-link" onClick={menuCloseHandler}>
           <Link to="/">Home</Link>
         </div>
-        <div className="menu-link">
+        <div onClick={menuCloseHandler} className="menu-link">
           <Link to="/history-page">My Entries</Link>
         </div>
         <div onClick={logOutHandler} className="menu-link">
