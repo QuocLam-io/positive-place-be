@@ -2,9 +2,10 @@ import React from "react";
 import { motion } from "framer-motion";
 
 const MobileMenu = ({ menuCloseHandler }) => {
-  return;
 
-  <motion.div
+  return
+
+(  <motion.div
     className="menu-parent"
     onClick={menuCloseHandler}
     initial={{ opacity: 0 }}
@@ -12,7 +13,7 @@ const MobileMenu = ({ menuCloseHandler }) => {
     exit={{ opacity: 0 }}
   >
     hello
-  </motion.div>;
+  </motion.div>;)
 };
 
 export default MobileMenu;
