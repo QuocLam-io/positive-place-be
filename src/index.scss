@@ -1087,8 +1087,6 @@ a:visited {
 .menu-parent {
   display: flex;
   flex-direction: column;
-  // align-items: center;
-  // justify-content: center;
   height: 100vh;
   width: 100vw;
   position: absolute;
@@ -1096,6 +1094,41 @@ a:visited {
   left: 0;
   background: rgba(255, 255, 255, 0.85);
   backdrop-filter: blur(8px);
+  color: rgba(0, 0, 0, 0.8);
+
+  .menu-close-btn{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-top: 4%;
+    gap: 2%;
+    height: 7%;
+
+    button{
+      background: transparent;
+      border: none;
+      font-size: 2rem;
+      color: #262626;
+    }
+  }
+  .menu-links{
+    display: flex;
+    flex-direction: column;
+    height: 21%;
+
+
+    .menu-link{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 33%;
+ 
+
+      &:hover{
+        color: #262626;
+      }
+    }
+  }
 }
 
 
