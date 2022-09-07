@@ -1096,7 +1096,7 @@ a:visited {
   backdrop-filter: blur(8px);
   color: rgba(0, 0, 0, 0.8);
 
-  button {
+  .menu-close-btn {
     display: flex;
     justify-content: flex-end;
     align-items: center;
@@ -1105,7 +1105,7 @@ a:visited {
     height: 7%;
     gap: 2%;
 
-    .menu-close-btn {
+    button {
       background: transparent;
       border: none;
       font-size: 1.3rem;
@@ -1129,7 +1129,7 @@ a:visited {
 .menu-parent-dark{
   background: rgba(0, 0, 0, 0.7);
   color: rgba(255, 255, 255, 0.8);
-
+  
   a:visited {
     color: rgba(255, 255, 255, 0.8);
   }
