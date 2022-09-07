@@ -116,7 +116,7 @@ const menuCloseHandler = ()=>{
       <AnimatePresence
         inital={false}
         exitBeforeEnter={true}
-        // onExitComplete={() => null}
+        onExitComplete={() => null}
       >
         {menuOpen && <MobileMenu menuCloseHandler={menuCloseHandler} />}
       </AnimatePresence>
