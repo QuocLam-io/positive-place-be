@@ -118,7 +118,8 @@ const menuCloseHandler = ()=>{
         exitBeforeEnter={true}
         onExitComplete={() => null}
       >
-        {menuOpen && <MobileMenu menuCloseHandler={menuCloseHandler} />}
+        {menuOpen && <MobileMenu menuCloseHandler={menuCloseHandler}
+        logOutHandler={logOutHandler} />}
       </AnimatePresence>
     </div>
   );

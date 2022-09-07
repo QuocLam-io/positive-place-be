@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 
-const MobileMenu = ({ menuCloseHandler }) => {
+const MobileMenu = ({ menuCloseHandler, logOutHandler }) => {
   return (
     <motion.div
       className="menu-parent"
@@ -21,7 +21,9 @@ const MobileMenu = ({ menuCloseHandler }) => {
         <div className="menu-link">
           <Link to="/history-page">My Entries</Link>
         </div>
-        <div className="menu-link">Log out</div>
+        <div onClick={logOutHandler} className="menu-link">
+          Log out
+        </div>
       </div>
     </motion.div>
   );
