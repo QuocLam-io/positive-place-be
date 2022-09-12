@@ -1,7 +1,5 @@
 # Positive Place
-> A Fullstack Mern Crud app wherein users can note daily posts of what they are grateful for (or upset about). Inspired by 
-> [Kurzgestat's Gratitude Journal](https://shop-us.kurzgesagt.org/products/gratitude-journal?variant=32410837352496)
->. 
+> A Fullstack Mern Crud app wherein users can note daily posts of what they are grateful for (or upset about). Inspired by [Kurzgestat's Gratitude Journal](https://shop-us.kurzgesagt.org/products/gratitude-journal?variant=32410837352496). 
 
 ## Table of contents
 * [General info](#general-info)
