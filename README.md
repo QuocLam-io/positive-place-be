@@ -1,5 +1,5 @@
 # Positive Place
-> A Fullstack Mern Crud app wherein users can note daily posts of what they are grateful for (or upset about).
+> A Fullstack Mern Crud app wherein users can note daily posts of what they are grateful for (or upset about). Inspired by (https://shop-us.kurzgesagt.org/products/gratitude-journal?variant=32410837352496 "Kurzgestat's Gratitude Journal")
 
 ## Table of contents
 * [General info](#general-info)
@@ -8,10 +8,6 @@
 * [Setup](#setup)
 * [Features](#features)
 * [Status](#status)
-* [Contact](#contact)
-
-## General info
-Add more general information about project. What the purpose of the project is? Motivation?
 
 ## Screenshots
 ![Example screenshot](./img/screenshot.png)
