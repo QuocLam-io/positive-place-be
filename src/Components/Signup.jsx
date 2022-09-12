@@ -53,6 +53,7 @@ const Signup = ({ isLoggedIn, setIsLoggedIn, isDarkMode }) => {
 
         <input
           type="password"
+          minLength="6"
           placeholder="Choose a password"
           onChange={(e) => {
             setPassword(e.target.value);
