@@ -1,5 +1,5 @@
 # Project Name
->  A Fullstack Mern Crud app wherein users can note daily posts of what they are grateful for (or upset about). Inspired by [Kurzgestat's Gratitude Journal](https://shop-us.kurzgesagt.org/products/gratitude-journal?variant=32410837352496), with a minimalist designed that can be toggled for light/dark positive/negative mode.
+>  A Fullstack Mern Crud app wherein users can note daily posts of what they are grateful for (or upset about). Inspired by [Kurzgestat's Gratitude Journal](https://shop-us.kurzgesagt.org/products/gratitude-journal?variant=32410837352496), with a minimalist designed theme that can be toggled for light/dark positive/negative mode.
 > Live demo [Positive Place](https://positive-place.netlify.app/).
 
 ## Table of Contents
@@ -10,10 +10,6 @@
 * [Setup](#setup)
 * [Usage](#usage)
 * [Project Status](#project-status)
-* [Room for Improvement](#room-for-improvement)
-* [Acknowledgements](#acknowledgements)
-* [Contact](#contact)
-<!-- * [License](#license) -->
 
 
 ## General Information
@@ -57,15 +53,3 @@ Provide various use cases and code examples here.
 
 ## Project Status
 Project is: _finished_ (pending whether Heroku follows through with dismantling their free tier)
-
-
-## Room for Improvement
-Include areas you believe need improvement / could be improved. Also add TODOs for future development.
-
-Room for improvement:
-- Improvement to be done 1
-- Improvement to be done 2
-
-To do:
-- Feature to be added 1
-- Feature to be added 2
