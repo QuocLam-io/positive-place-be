@@ -7,41 +7,32 @@
 * [Technologies Used](#technologies-used)
 * [Features](#features)
 * [Screenshots](#screenshots)
-* [Usage](#usage)
 * [Project Status](#project-status)
 
 
 ## General Information
-- Provide general information about your project here.
-- What problem does it (intend to) solve?
-- What is the purpose of your project?
-- Why did you undertake it?
+Positive Place was designed to provide an easily accessible and low effort service to improve mental health. There's emerging evidence that practicing gratitude on a daily basis not only produce an immediate relief but also trains the brain to develop the mental faculties to consistently recognize the qualities of life that are normally taken for granted. The app recognizes that it is unhealthy to be in a state of constantly desiring a positive outcome, so there is a mode referred to as "Negative Space" that's reserved for days to air grievances. The Negative Mode is triggered by a custom toggle, affectionately named Mr. Merp, on the bottom right corner of the screen. The app supports User Authentication and has backend support to revisit, edit, and delete previous posts.
+
 
 
 ## Technologies Used
-- Tech 1 - version 1.0
-- Tech 2 - version 2.0
-- Tech 3 - version 3.0
+- Front-end: React, Sass
+- Back-end: Mongoose, Express, Node.js
+- Libraries: Framer Motion, Bycrypt, Express Sessions
 
 
 ## Features
-List the ready features here:
-- Awesome feature 1
-- Awesome feature 2
-- Awesome feature 3
+- Custom sliding toggle to switch from "Positive Place" (to express gratitudes) and "Negative Space" (to expressive attitudes).
+- Negative Space and Positive Place are set to light and dark mode
+- Backend uses bcrypt and express sessions to provide password hashing for secure User Authentication
 
 
 ## Screenshots
-![Example screenshot](./img/screenshot.png)
-<!-- If you have screenshots you'd like to share, include them here. -->
 
-
-## Usage
-How does one go about using it?
-Provide various use cases and code examples here.
-
-`write-your-code-here`
-
+<img width="722" alt="Screen Shot 2022-09-12 at 8 20 23 PM" src="https://user-images.githubusercontent.com/82473096/189783107-7eb6a592-f628-4643-b657-086059ed283b.png">
+<img width="722" alt="Screen Shot 2022-09-12 at 8 18 11 PM" src="https://user-images.githubusercontent.com/82473096/189783114-d3ee1e85-3906-4e04-97a9-088cdec527fd.png">
+<img width="117" alt="Screen Shot 2022-09-12 at 8 20 44 PM" src="https://user-images.githubusercontent.com/82473096/189783133-a5f625ff-e38d-4f80-b5f4-738c956308dd.png">
+<img width="723" alt="Screen Shot 2022-09-12 at 8 25 46 PM" src="https://user-images.githubusercontent.com/82473096/189783147-629c54a4-25ee-42ed-8d21-552fa8231f6b.png">
 
 ## Project Status
 Project is: _finished_ (pending whether Heroku follows through with dismantling their free tier)
