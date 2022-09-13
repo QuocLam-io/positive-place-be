@@ -58,7 +58,6 @@ const Positive = ({ positiveEntries, setPositiveEntries, months }) => {
       </div>
 
       <form onSubmit={handlePositive} className="positive-input-form" action=""
-      disabled="true"
       >
         <input
           onChange={(e) => {
@@ -87,6 +86,7 @@ const Positive = ({ positiveEntries, setPositiveEntries, months }) => {
           whileTap={{ scale: 0.9 }}
           className="login-btn"
           type="submit"
+          disabled={positiveModalOpen}
         >
           Done
         </motion.button>
