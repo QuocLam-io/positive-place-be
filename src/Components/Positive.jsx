@@ -11,6 +11,7 @@ const Positive = ({ positiveEntries, setPositiveEntries, months }) => {
   const [positiveThree, setPositiveThree] = useState("");
   console.log(positiveModalOpen);
 
+
   const modalOpen = () => {
     setPositiveModalOpen(true);
   };
@@ -57,7 +58,7 @@ const Positive = ({ positiveEntries, setPositiveEntries, months }) => {
       </div>
 
       <form onSubmit={handlePositive} className="positive-input-form" action=""
-      disabled={positiveModalOpen && true}
+      disabled={positiveModalOpen && "true"}
       >
         <input
           onChange={(e) => {
