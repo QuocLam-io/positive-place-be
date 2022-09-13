@@ -57,7 +57,7 @@ const Positive = ({ positiveEntries, setPositiveEntries, months }) => {
 
       <form onSubmit={handlePositive} className="positive-input-form" action=""
       
-      disabled={positiveModalOpen}
+      {positiveModalOpen && "disabled"}
       >
         <input
           onChange={(e) => {
