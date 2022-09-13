@@ -1,5 +1,5 @@
 # Positive Place
->  A Fullstack Mern Crud app that is mobile friendly wherein users can note daily posts of what they are grateful for (or upset about). Inspired by [Kurzgestat's Gratitude Journal](https://shop-us.kurzgesagt.org/products/gratitude-journal?variant=32410837352496), with a minimalist designed theme that can be toggled for light/dark positive/negative mode.
+>  A mobile-friendly Fullstack Mern Crud app wherein users can note daily posts of what they are grateful for (or upset about). Inspired by [Kurzgestat's Gratitude Journal](https://shop-us.kurzgesagt.org/products/gratitude-journal?variant=32410837352496), with a minimalist designed theme that can be toggled for light/dark positive/negative mode.
 > Live demo [Positive Place](https://positive-place.netlify.app/).
 
 ## Table of Contents
@@ -25,6 +25,9 @@ Positive Place was designed to provide an easily accessible and low effort servi
 - Custom sliding toggle to switch from "Positive Place" (to express gratitudes) and "Negative Space" (to expressive attitudes).
 - Negative Space and Positive Place are set to light and dark mode
 - Backend uses bcrypt and express sessions to provide password hashing for secure User Authentication
+- Mobile friendly
+- Floating cubes and glass panels with blur effect for calming effect to fit the tone
+- Desktop has a page dedicated to Software Engineering cohort
 
 
 ## Screenshots
