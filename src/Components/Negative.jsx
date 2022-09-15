@@ -98,7 +98,9 @@ const Negative = ({
         exitBeforeEnter={true}
         onExitComplete={() => null}
       >
-        {positiveModalOpen && <PositiveModal modalClose={modalClose} />}
+        {positiveModalOpen && <PositiveModal 
+        isDarkMode={isDarkMode}
+        modalClose={modalClose} />}
       </AnimatePresence>
     </div>
   );

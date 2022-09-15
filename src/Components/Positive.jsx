@@ -9,7 +9,6 @@ const Positive = ({ positiveEntries, setPositiveEntries, months }) => {
   const [positiveOne, setPositiveOne] = useState("");
   const [positiveTwo, setPositiveTwo] = useState("");
   const [positiveThree, setPositiveThree] = useState("");
-  console.log(positiveModalOpen);
 
 
   const modalOpen = () => {
@@ -97,7 +96,8 @@ const Positive = ({ positiveEntries, setPositiveEntries, months }) => {
         exitBeforeEnter={true}
         onExitComplete={() => null}
       >
-        {positiveModalOpen && <PositiveModal modalClose={modalClose} />}
+        {positiveModalOpen && <PositiveModal 
+        modalClose={modalClose} />}
       </AnimatePresence>
     </div>
   );
