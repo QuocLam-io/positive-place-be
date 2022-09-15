@@ -28,7 +28,7 @@ const PositiveModal = ({ modalClose, isDarkMode }) => {
   return (
     <Backdrop modalClose={modalClose}>
       <motion.div
-        className={`${isDarkMode && "dark-modal"} modal`}
+        className={`modal ${isDarkMode && "dark-modal"}`}
         onClick={(e) => e.stopPropagation()}
         variants={dropIn}
         initial="hidden"
