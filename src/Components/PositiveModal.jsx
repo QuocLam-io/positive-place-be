@@ -39,9 +39,9 @@ const PositiveModal = ({ modalClose }) => {
           <p>Post entered!</p>
           <button onClick={modalClose}>X</button>
         </div>
-        <p className="model-text">
-          You can view your entries in the My Entries tab
-        </p>
+        <div className="model-text">
+          <p>You can view your entries in the My Entries tab</p>
+        </div>
         <div className="modal-footer">
           <Link to="/history-page">
             <p>Go to My Entries</p>

@@ -1159,19 +1159,25 @@ a:visited {
     border: teal 2px solid;
 
     p{
-      align-self: end;
+      font-size: 1.5rem;      align-self: end;
     }
 
     button{
+      height:100%;
+      width: 10%;
+      background: transparent;
       border: none;
     }
   }
 
   .modal-text {
     border: teal 2px solid;
+    height: 28%;
+
   }
 
   .modal-footer {
+    height: 25.5%;
     border: teal 2px solid;
   }
 }
