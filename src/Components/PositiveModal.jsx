@@ -41,7 +41,7 @@ const PositiveModal = ({ modalClose }) => {
         </div>
         <div className="modal-text">
           <p>
-            You can view your entries in the <strong>My Entries tab</strong>
+            You can view your entries in the <strong>My Entries </strong>tab
           </p>
         </div>
         <div className="modal-footer">
