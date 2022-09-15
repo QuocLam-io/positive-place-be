@@ -1144,9 +1144,11 @@ a:visited {
 .modal {
   display: flex;
   flex-direction: column;
-  height: min(50%, 300px);
-  width: clamp(50%, 700px, 90%);
-  padding: 8.5% 5.5%;
+  // height: min(50%, 300px);
+  // width: clamp(50%, 700px, 90%);
+  width: clamp(35%, 444px, 90%);
+  height: clamp(25%, 188px, 50%);
+  // padding: 8.5% 5.5%;
   background: rgba(255, 255, 255, 0.8);
   border-radius: 18px;
 
