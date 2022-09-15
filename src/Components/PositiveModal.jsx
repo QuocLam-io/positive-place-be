@@ -40,7 +40,9 @@ const PositiveModal = ({ modalClose }) => {
           <button onClick={modalClose}>X</button>
         </div>
         <div className="modal-text">
-          <p>You can view your entries in the My Entries tab</p>
+          <p>
+            You can view your entries in the <strong>My Entries tab</strong>
+          </p>
         </div>
         <div className="modal-footer">
           <Link to="/history-page">
