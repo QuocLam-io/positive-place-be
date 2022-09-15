@@ -1143,17 +1143,28 @@ a:visited {
 
 .modal {
   display: flex;
+  justify-content: space-between;
   flex-direction: column;
-  // height: min(50%, 300px);
-  // width: clamp(50%, 700px, 90%);
   width: clamp(35%, 444px, 90%);
   height: clamp(25%, 188px, 50%);
-  // padding: 8.5% 5.5%;
+  padding: 1rem;
+  font-family: work-sans, sans-serif;
   background: rgba(255, 255, 255, 0.8);
   border-radius: 18px;
 
   .modal-header {
+    display: flex;
+    justify-content: space-between;
+    height: 21%;
     border: teal 2px solid;
+
+    p{
+      align-self: end;
+    }
+
+    button{
+      border: none;
+    }
   }
 
   .modal-text {
