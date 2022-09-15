@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import Backdrop from "./Backdrop";
 
@@ -34,10 +35,25 @@ const PositiveModal = ({ modalClose }) => {
         animate="visible"
         exit="exit"
       >
-        <p className="modal-text">🤗 You've just entered a post</p>
+
+<div className="modal-header">
+  <p>Post entered!</p>
+  <button>X</button>
+</div>
+<p className="model-text">
+  You can view your entries in the My Entries tab
+</p>
+<div className="modal-footer">
+  <Link to="/history-page">
+  <p>Go to My Entries</p>
+  </Link>
+  <button className="modal-btn" onClick={modalClose} >Done</button>
+</div>
+
+        {/* <p className="modal-text">🤗 You've just entered a post</p>
         <button className="modal-btn" onClick={modalClose}>
           X
-        </button>
+        </button> */}
       </motion.div>
     </Backdrop>
   );
