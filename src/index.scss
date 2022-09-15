@@ -1149,9 +1149,8 @@ a:visited {
   height: min(50%, 300px);
   width: clamp(50%, 700px, 90%);
   padding: 1rem;
-  /* gap: 2rem; */
-  border-radius: 2rem;
-  background: rgba(255, 255, 255);
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 18px;
 }
 
 .modal-text {
