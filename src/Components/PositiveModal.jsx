@@ -39,7 +39,7 @@ const PositiveModal = ({ modalClose }) => {
           <p>Post entered!</p>
           <button onClick={modalClose}>X</button>
         </div>
-        <div className="model-text">
+        <div className="modal-text">
           <p>You can view your entries in the My Entries tab</p>
         </div>
         <div className="modal-footer">

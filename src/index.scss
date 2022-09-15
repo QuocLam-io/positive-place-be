@@ -1173,12 +1173,18 @@ a:visited {
   .modal-text {
     border: teal 2px solid;
     height: 28%;
+p{
 
+}
   }
 
   .modal-footer {
+    display: flex;
+    
     height: 25.5%;
     border: teal 2px solid;
+
+
   }
 }
 
