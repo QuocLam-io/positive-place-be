@@ -36,7 +36,7 @@ const Positive = ({ positiveEntries, setPositiveEntries, months }) => {
   const handlePositive = (e) => {
     e.preventDefault();
     axios
-      .post("https://positive-place-be..up.railway.app/api/positive", {
+      .post("https://positive-place-be.up.railway.app/api/positive", {
         todayOne: positiveOne,
         todayTwo: positiveTwo,
         todayThree: positiveThree,

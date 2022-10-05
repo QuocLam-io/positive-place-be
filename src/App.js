@@ -49,7 +49,7 @@ function App() {
 
   useEffect(() => {
     axios
-      .get("https://positive-place-be..up.railway.app/auth/me")
+      .get("https://positive-place-be.up.railway.app/auth/me")
       .then(({ data }) => {
         setIsLoggedIn(data.isLoggedIn);
       });
