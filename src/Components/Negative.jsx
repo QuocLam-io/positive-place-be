@@ -41,7 +41,7 @@ const Negative = ({
   const handleNegative = (e) => {
     e.preventDefault();
     axios
-      .post("https://positive-place-be.herokuapp.com/api/negative", {
+      .post("https://positive-place-be..up.railway.app/api/negative", {
         todayOne: negativeOne,
         todayTwo: negativeTwo,
         todayThree: negativeThree,
@@ -60,7 +60,7 @@ const Negative = ({
       </div>
 
       <form onSubmit={handleNegative} className="negative-input-form" action="">
-        <input 
+        <input
           onChange={(e) => {
             setNegativeOne(e.target.value);
           }}
@@ -98,9 +98,9 @@ const Negative = ({
         exitBeforeEnter={true}
         onExitComplete={() => null}
       >
-        {positiveModalOpen && <PositiveModal 
-        isDarkMode={isDarkMode}
-        modalClose={modalClose} />}
+        {positiveModalOpen && (
+          <PositiveModal isDarkMode={isDarkMode} modalClose={modalClose} />
+        )}
       </AnimatePresence>
     </div>
   );

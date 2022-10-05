@@ -10,7 +10,6 @@ const Positive = ({ positiveEntries, setPositiveEntries, months }) => {
   const [positiveTwo, setPositiveTwo] = useState("");
   const [positiveThree, setPositiveThree] = useState("");
 
-
   const modalOpen = () => {
     setPositiveModalOpen(true);
   };
@@ -37,7 +36,7 @@ const Positive = ({ positiveEntries, setPositiveEntries, months }) => {
   const handlePositive = (e) => {
     e.preventDefault();
     axios
-      .post("https://positive-place-be.herokuapp.com/api/positive", {
+      .post("https://positive-place-be..up.railway.app/api/positive", {
         todayOne: positiveOne,
         todayTwo: positiveTwo,
         todayThree: positiveThree,
@@ -56,8 +55,7 @@ const Positive = ({ positiveEntries, setPositiveEntries, months }) => {
         <p>Today I'm grateful for</p>
       </div>
 
-      <form onSubmit={handlePositive} className="positive-input-form" action=""
-      >
+      <form onSubmit={handlePositive} className="positive-input-form" action="">
         <input
           onChange={(e) => {
             setPositiveOne(e.target.value);
@@ -96,8 +94,7 @@ const Positive = ({ positiveEntries, setPositiveEntries, months }) => {
         exitBeforeEnter={true}
         onExitComplete={() => null}
       >
-        {positiveModalOpen && <PositiveModal 
-        modalClose={modalClose} />}
+        {positiveModalOpen && <PositiveModal modalClose={modalClose} />}
       </AnimatePresence>
     </div>
   );

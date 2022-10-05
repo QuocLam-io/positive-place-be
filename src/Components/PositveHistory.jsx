@@ -5,7 +5,7 @@ import axios from "../axios";
 const PositiveHistory = ({ positiveEntries, setPositiveEntries }) => {
   useEffect(() => {
     axios
-      .get("https://positive-place-be.herokuapp.com/api/positive")
+      .get("https://positive-place-be..up.railway.app/api/positive")
       .then((response) => {
         const pEntries = response.data;
         setPositiveEntries(pEntries);
@@ -20,11 +20,11 @@ const PositiveHistory = ({ positiveEntries, setPositiveEntries }) => {
 
   const positiveDeleteHandler = (e) => {
     axios
-      .delete(`https://positive-place-be.herokuapp.com/api/positive/${e}`)
+      .delete(`https://positive-place-be..up.railway.app/api/positive/${e}`)
       .then((res) => {
         console.log(res);
         axios
-          .get("https://positive-place-be.herokuapp.com/api/positive")
+          .get("https://positive-place-be..up.railway.app/api/positive")
           .then((response) => {
             const pEntries = response.data;
             setPositiveEntries(pEntries);

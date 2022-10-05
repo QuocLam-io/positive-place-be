@@ -45,12 +45,11 @@ function App() {
 
   const darkModeHandler = () => {
     setIsDarkMode(!isDarkMode);
-
   };
 
   useEffect(() => {
     axios
-      .get("https://positive-place-be.herokuapp.com/auth/me")
+      .get("https://positive-place-be..up.railway.app/auth/me")
       .then(({ data }) => {
         setIsLoggedIn(data.isLoggedIn);
       });
@@ -164,10 +163,7 @@ function App() {
 
         <Route path="/remember-why" element={<RememberWhy />} />
       </Routes>
-      <Merp 
-      isDarkMode={isDarkMode}
-      setIsDarkMode={setIsDarkMode}
-      />
+      <Merp isDarkMode={isDarkMode} setIsDarkMode={setIsDarkMode} />
     </div>
   );
 }
