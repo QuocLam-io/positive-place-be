@@ -14,7 +14,7 @@ const PositiveEdit = () => {
   const positiveEditHandler = (e) => {
     e.preventDefault();
     axios
-      .put(`https://positive-place-be.herokuapp.app/api/positive/${id}`, {
+      .put(`https://positive-place-be.up.railway.app/api/positive/${id}`, {
         todayOne: positiveEditOne,
         todayTwo: positiveEditTwo,
         todayThree: positiveEditThree,
@@ -31,7 +31,7 @@ const PositiveEdit = () => {
   useEffect(() => {
     // e.preventDefault();
     axios
-      .get(`https://positive-place-be.herokuapp.app/api/positive/${id}`)
+      .get(`https://positive-place-be.up.railway.app/api/positive/${id}`)
       .then((res) => {
         console.log(res);
         setPositiveEditDate(res.data.day);
