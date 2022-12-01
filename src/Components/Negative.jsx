@@ -41,7 +41,7 @@ const Negative = ({
   const handleNegative = (e) => {
     e.preventDefault();
     axios
-      .post("https://positive-place-be.up.railway.app/api/negative", {
+      .post("https://positive-place-be.herokuapp.app/api/negative", {
         todayOne: negativeOne,
         todayTwo: negativeTwo,
         todayThree: negativeThree,
