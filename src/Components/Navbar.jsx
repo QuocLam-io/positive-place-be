@@ -16,7 +16,7 @@ const Navbar = ({ isDarkMode, isLoggedIn, setIsLoggedIn }) => {
 
   const logOutHandler = () => {
     axios
-      .post("https://positive-place-be.herokuapp.app/auth/logout")
+      .post("https://positive-place-be.herokuapp.com/auth/logout")
       .then(() => {
         setIsLoggedIn(false);
       });
